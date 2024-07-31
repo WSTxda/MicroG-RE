@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">نشط في الخلفية</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> يعمل في الخلفية</string>
+    <string name="foreground_service_notification_big_text">استبعد <xliff:g example="خدمات microG">%1$s</xliff:g> من تحسينات البطارية أو قم بتغيير إعدادات الإشعارات لإخفاء هذا الإشعار</string>
+
+    <string name="menu_settings">الإعدادات</string>
+
+    <string name="list_no_item_none">لا شيء</string>
+    <string name="list_item_see_all">رؤية الكل</string>
+
+    <string name="open_app">فتح</string>
+
+    <string name="service_status_disabled">معطل</string>
+    <string name="service_status_enabled">مفعل</string>
+    <string name="service_status_automatic">تلقائي</string>
+    <string name="service_status_manual">يدوي</string>
+    <string name="service_status_enabled_short">ممكن</string>
+    <string name="service_status_disabled_short">معطل</string>
+
+    <!-- Patchers names-->
+
+    <string name="vanced">Vanced</string>
+    <string name="revanced">ReVanced</string>
+    <string name="youtube_advanced">YT Advanced</string>
+    <string name="revanced_extended">ReVanced Extended</string>
+    <string name="revanced_extended_anddea">ReVanced Extended (Anddea)</string>
+    <string name="revanced_extended_rufusin">ReVanced Extended (Rufusin)</string>
+</resources>
