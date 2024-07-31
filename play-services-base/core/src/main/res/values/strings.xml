@@ -5,23 +5,23 @@
   -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="foreground_service_notification_title">نشط في الخلفية</string>
-    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> يعمل في الخلفية</string>
-    <string name="foreground_service_notification_big_text">استبعد <xliff:g example="خدمات microG">%1$s</xliff:g> من تحسينات البطارية أو قم بتغيير إعدادات الإشعارات لإخفاء هذا الإشعار</string>
+    <string name="foreground_service_notification_title">Active in background</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> is running in background</string>
+    <string name="foreground_service_notification_big_text">Exclude <xliff:g example="microG Services">%1$s</xliff:g> from battery optimizations or change notification settings to hide this notification</string>
 
-    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_settings">Settings</string>
 
-    <string name="list_no_item_none">لا شيء</string>
-    <string name="list_item_see_all">رؤية الكل</string>
+    <string name="list_no_item_none">None</string>
+    <string name="list_item_see_all">See all</string>
 
-    <string name="open_app">فتح</string>
+    <string name="open_app">Open</string>
 
-    <string name="service_status_disabled">معطل</string>
-    <string name="service_status_enabled">مفعل</string>
-    <string name="service_status_automatic">تلقائي</string>
-    <string name="service_status_manual">يدوي</string>
-    <string name="service_status_enabled_short">ممكن</string>
-    <string name="service_status_disabled_short">معطل</string>
+    <string name="service_status_disabled">Disabled</string>
+    <string name="service_status_enabled">Enabled</string>
+    <string name="service_status_automatic">Automatic</string>
+    <string name="service_status_manual">Manual</string>
+    <string name="service_status_enabled_short">On</string>
+    <string name="service_status_disabled_short">Off</string>
 
     <!-- Patchers names-->
 
