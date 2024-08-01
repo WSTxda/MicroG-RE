@@ -23,12 +23,4 @@
     <string name="service_status_enabled_short">ممكن</string>
     <string name="service_status_disabled_short">معطل</string>
 
-    <!-- Patchers names-->
-
-    <string name="vanced">Vanced</string>
-    <string name="revanced">ReVanced</string>
-    <string name="youtube_advanced">YT Advanced</string>
-    <string name="revanced_extended">ReVanced Extended</string>
-    <string name="revanced_extended_anddea">ReVanced Extended (Anddea)</string>
-    <string name="revanced_extended_rufusin">ReVanced Extended (Rufusin)</string>
 </resources>
