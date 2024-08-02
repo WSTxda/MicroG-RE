@@ -158,7 +158,7 @@
     <string name="push_notifications_summary_values_seconds">%s s</string>
     <string name="push_notifications_summary_values_minutes">%s min</string>
 
-    <string name="pref_network_google_enabled_summary">Jeśli wyłączone, wszystkie połączenia z serwerami Google zwykle wykonywane przez MicroG zostaną odrzucone. Zastępuje to specyficzne ustawienia dla usługi</string>
+    <string name="pref_network_google_enabled_summary"><b>Wyłączone:</b> Wszystkie połączenia z serwerami Google zwykle wykonywane przez MicroG zostaną odrzucone. Zastępuje to specyficzne ustawienia dla usługi</string>
     <string name="pref_network_google_enabled">Zezwól na łączenie się z serwerami Google</string>
     <string name="pref_network_google_use_tor">Połącz z Google przez sieć Tor</string>
     <string name="pref_network_google_use_tor_summary">Wymaga zainstalowania Orbot\nJeszcze niewspierane</string>
