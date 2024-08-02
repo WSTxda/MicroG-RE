@@ -92,14 +92,14 @@
     <string name="cond_perm_title">Brakuje uprawnień</string>
 
     <string name="pref_auth_trust_google_title">Zaufaj Google w zakresie uprawnień aplikacji</string>
-    <string name="pref_auth_trust_google_summary">Po wyłączeniu, do użytkownika kierowane jest pytanie przed wysyłaniem prośby o autoryzację do Google. Niektóre aplikacje nie będą mogły skorzystać z konta Google po wyłączeniu tej opcji.</string>
+    <string name="pref_auth_trust_google_summary"><b>Wyłączone:</b> Przed wysłaniem prośby o autoryzację do Google użytkownik otrzyma stosowne powiadomienie. Proszę pamiętać, że w przypadku wyłączenia tej funkcji, niektóre aplikacje mogą nie mieć możliwości korzystania z konta Google.</string>
     <string name="pref_auth_visible_title">Zezwól aplikacjom na znajdowanie kont</string>
-    <string name="pref_auth_visible_summary">Po włączeniu, wszystkie aplikacje na tym urządzeniu będą mogły wyświetlać adresy e-mail kont Google bez uprzedniej autoryzacji</string>
+    <string name="pref_auth_visible_summary"><b>Włączone:</b> Wszystkie aplikacje na urządzeniu będą mogły uzyskać dostęp do adresu e-mail związanego z kontem Google, bez potrzeby wcześniejszej autoryzacji.</string>
     <string name="brand_spoof_button">Huawei</string>
     <string name="pref_auth_include_android_id_title">Uwierzytelnij przez rejestrację urządzenia</string>
-    <string name="pref_auth_include_android_id_summary">Gdy wyłączone, żądania uwierzytelnienia nie będą zależne od rejestracji urządzenia, co umożliwia nieuwierzytelnionym urządzeniom na zalogowanie się, ale może spowodować nieprzewidziane skutki</string>
+    <string name="pref_auth_include_android_id_summary"><b>Wyłączone:</b> Proces uwierzytelnienia nie będzie zależny od rejestracji urządzenia, co pozwoli na zalogowanie się z urządzeń niewymagających uwierzytelnienia. Może spowodować to nieprzewidziane problemy.</string>
     <string name="pref_auth_strip_device_name_title">Usuń nazwę urządzenia przy uwierzytelnianiu</string>
-    <string name="pref_auth_strip_device_name_summary">Gdy włączone, żądania uwierzytelnienia nie będą zawierać nazwy urządzenia, co umożliwia nieuwierzytelnionym urządzeniom na zalogowanie się, ale może spowodować nieprzewidziane skutki</string>
+    <string name="pref_auth_strip_device_name_summary"><b>Włączone:</b> Żądania uwierzytelnienia nie będą zawierać nazwy urządzenia, co umożliwia nieuwierzytelnionym urządzeniom na zalogowanie się. Może spowodować to nieprzewidziane problemy.</string>
 
     <string name="pref_checkin_enable_summary">Zarejestruje twoje urządzenie w usługach Google i utworzy unikalny identyfikator urządzenia. MicroG usuwa inne dane identyfikacyjne niż nazwa twojego konta z tego identyfikatora</string>
     <string name="pref_device_registration_android_id">ID Androida</string>
@@ -155,13 +155,13 @@
     <string name="push_notifications_summary_off">WYŁ</string>
     <string name="push_notifications_summary_automatic">WŁ. / Automatycznie: co %s</string>
     <string name="push_notifications_summary_manual">WŁ. / Ręcznie: co %s</string>
-    <string name="push_notifications_summary_values_seconds">%s sek</string>
+    <string name="push_notifications_summary_values_seconds">%s s</string>
     <string name="push_notifications_summary_values_minutes">%s min</string>
 
     <string name="pref_network_google_enabled_summary">Jeśli wyłączone, wszystkie połączenia z serwerami Google zwykle wykonywane przez MicroG zostaną odrzucone. Zastępuje to specyficzne ustawienia dla usługi</string>
     <string name="pref_network_google_enabled">Zezwól na łączenie się z serwerami Google</string>
     <string name="pref_network_google_use_tor">Połącz z Google przez sieć Tor</string>
-    <string name="pref_network_google_use_tor_summary">Wymaga zainstalowania Orbot\\nJeszcze niewspierane</string>
+    <string name="pref_network_google_use_tor_summary">Wymaga zainstalowania Orbot\nJeszcze niewspierane</string>
 
     <!-- Ustawienia konta -->
 
@@ -181,18 +181,14 @@
     <!-- Usuwanie konta -->
 
     <string name="dialog_title_remove_account">Usuń konto</string>
-    <string name="dialog_message_remove_account">Czy na pewno chcesz usunąć to konto?\n\nNiektóre usługi i funkcje będą niedostępne.\nDane nie zostaną utracone.</string>
+    <string name="dialog_message_remove_account">Czy na pewno chcesz usunąć to konto?\n\nNiektóre usługi i funkcje będą niedostępne.\nDane nie zostaną usunięte.</string>
     <string name="dialog_confirm_button">Usuń</string>
     <string name="dialog_cancel_button">Anuluj</string>
     <string name="toast_remove_account_success">Usunięto: %s</string>
 
     <!-- Informacje -->
 
-    <string name="wstxda">WSTxda</string>
     <string name="developer">Deweloper</string>
-    <string name="developer_link">https://github.com/WSTxda</string>
-    <string name="github">GitHub</string>
     <string name="github_source">Repozytorium kodu źródłowego</string>
-    <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
     <string name="pref_hide_launcher_icon">Ukryj ikonę w launcherze</string>
 </resources>
