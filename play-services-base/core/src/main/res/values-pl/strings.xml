@@ -7,7 +7,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="foreground_service_notification_title">Aktywna w tle</string>
     <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> jest uruchomiona w tle</string>
-    <string name="foreground_service_notification_big_text">Exclude <xliff:g example="microG Services">%1$s</xliff:g> from battery optimizations or change notification settings to hide this notification</string>
+    <string name="foreground_service_notification_big_text">Wyłącz optymalizację baterii dla <xliff:g example="microG Services">%1$s</xliff:g> lub zmień ustawienia powiadomień, aby ukryć to powiadomienie</string>
 
     <string name="menu_settings">Ustawienia</string>
 
@@ -16,19 +16,10 @@
 
     <string name="open_app">Otwórz</string>
 
-    <string name="service_status_disabled">Wyłączona</string>
-    <string name="service_status_enabled">Włączona</string>
-    <string name="service_status_automatic">Automatycznie</string>
-    <string name="service_status_manual">Ręcznie</string>
+    <string name="service_status_disabled">Wyłączony</string>
+    <string name="service_status_enabled">Włączony</string>
+    <string name="service_status_automatic">Automatyczny</string>
+    <string name="service_status_manual">Ręczny</string>
     <string name="service_status_enabled_short">Wł.</string>
     <string name="service_status_disabled_short">Wył.</string>
-
-    <!-- Nazwy łatek -->
-
-    <string name="vanced">Vanced</string>
-    <string name="revanced">ReVanced</string>
-    <string name="youtube_advanced">YT Advanced</string>
-    <string name="revanced_extended">ReVanced Extended</string>
-    <string name="revanced_extended_anddea">ReVanced Extended (Anddea)</string>
-    <string name="revanced_extended_rufusin">ReVanced Extended (Rufusin)</string>
 </resources>
