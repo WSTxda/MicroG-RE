@@ -4,17 +4,16 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">MicroG</string>
     <string name="gms_settings_name">Ustawienia microG</string>
     <string name="gms_settings_summary">Ustaw usługi MicroG</string>
 	
-	<string name="just_a_sec">Chwileczkę…</string>
+    <string name="just_a_sec">Chwileczkę…</string>
     <string name="ask_permission_tos">Kontynuując, zgadzasz się na wykorzystywanie swoich danych przez Google oraz usługi MicroG zgodnie z warunkami korzystania oraz polityką prywatności Google</string>
     <string name="ask_scope_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> chce:</string>
     <string name="ask_service_permission_title"><xliff:g example="F-Droid">%1$s</xliff:g> chce wykorzystać:</string>
 	
-	<string name="pref_privacy_title">Prywatność</string>
-	<string name="pref_privacy_summary">Ustawienia prywatności dla uwierzytelniania i aplikacji</string>
+    <string name="pref_privacy_title">Prywatność</string>
+    <string name="pref_privacy_summary">Ustawienia prywatności dla uwierzytelniania i aplikacji</string>
     <string name="prefcat_applications">Aplikacje</string>
     <string name="prefcat_authentication">Uwierzytelnienie</string>
 
@@ -45,18 +44,15 @@
     <string name="perm_extended_access_label">Rozszerzony dostęp do usług Google</string>
 
     <string name="service_name_checkin">Rejestracja urządzenia</string>
-    <string name="service_name_mcs">Cloud Messaging</string>
 
     <string name="network_type_mobile">Dane mobilne</string>
     <string name="network_type_wifi">Wi-Fi</string>
-    <string name="network_type_roaming">Roaming</string>
     <string name="network_type_other">Inne sieci</string>
 
     <!-- Samo-sprawdzanie -->
 
     <string name="self_check_cat_fake_sig">Wsparcie dla oszukiwania podpisu</string>
     <string name="self_check_cat_gms_packages">Zainstalowane pakiety</string>
-    <string name="self_check_cat_system">System</string>
 
     <string name="self_check_name_fake_sig_perm">System wspiera oszukiwanie podpisu</string>
     <string name="self_check_resolution_fake_sig_perm">Twój ROM nie posiada wbudowanego wsparcia dla oszukiwania podpisu. Nadal możesz używać Xposed lub innych systemów do oszukiwania podpisu. Przejrzyj dokumentację, aby dowiedzieć się, które ROM-y wspierają oszukiwanie podpisu i jak korzystać z MicroG na ROM-ach, które tego nie wspierają</string>
@@ -75,10 +71,6 @@
     <string name="self_check_name_battery_optimizations">Ignorowanie optymalizacji baterii</string>
     <string name="self_check_resolution_battery_optimizations">Stuknij tutaj, aby wyłączyć optymalizację baterii. W przeciwnym razie mogą wystąpić problemy z otrzymywaniem powiadomień z YouTube i innych zarejestrowanych aplikacji</string>
 
-    <string name="self_check_pkg_revanced">ReVanced</string>
-    <string name="self_check_pkg_revanced_extended">ReVanced Extended</string>
-    <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
-    <string name="self_check_pkg_vanced">Vanced</string>
     <string name="self_check_revanced_name_app_installed">Uruchamianie <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">Aplikacja %1$s</xliff:g> nie została znaleziona, skompiluj lub zainstaluj zmodyfikowany apk</string>
 
@@ -95,7 +87,6 @@
     <string name="pref_auth_trust_google_summary"><b>Wyłączone:</b> Przed wysłaniem prośby o autoryzację do Google użytkownik otrzyma stosowne powiadomienie. Proszę pamiętać, że w przypadku wyłączenia tej funkcji, niektóre aplikacje mogą nie mieć możliwości korzystania z konta Google.</string>
     <string name="pref_auth_visible_title">Zezwól aplikacjom na znajdowanie kont</string>
     <string name="pref_auth_visible_summary"><b>Włączone:</b> Wszystkie aplikacje na urządzeniu będą mogły uzyskać dostęp do adresu e-mail związanego z kontem Google, bez potrzeby wcześniejszej autoryzacji.</string>
-    <string name="brand_spoof_button">Huawei</string>
     <string name="pref_auth_include_android_id_title">Uwierzytelnij przez rejestrację urządzenia</string>
     <string name="pref_auth_include_android_id_summary"><b>Wyłączone:</b> Proces uwierzytelnienia nie będzie zależny od rejestracji urządzenia, co pozwoli na zalogowanie się z urządzeń niewymagających uwierzytelnienia. Może spowodować to nieprzewidziane problemy.</string>
     <string name="pref_auth_strip_device_name_title">Usuń nazwę urządzenia przy uwierzytelnianiu</string>
@@ -107,8 +98,6 @@
     <string name="checkin_not_registered">Niezarejestrowane</string>
     <string name="checkin_last_registration">Ostatnia rejestracja: <xliff:g example="Wczoraj, 14:20">%1$s</xliff:g></string>
     <string name="checkin_enable_switch">Zarejestruj urządzenie</string>
-
-    <string name="pref_info_status">Status</string>
 
     <string name="pref_account_title">Konta</string>
     <string name="pref_account_summary">Zaloguj się na nowe konto Google</string>
@@ -152,7 +141,7 @@
     <string name="pref_device_registration_select_profile_title">Wybierz profil</string>
     <string name="pref_device_registration_device_profile_category">Profil urządzenia</string>
 
-    <string name="push_notifications_summary_off">WYŁ</string>
+    <string name="push_notifications_summary_off">WYŁ.</string>
     <string name="push_notifications_summary_automatic">WŁ. / Automatycznie: co %s</string>
     <string name="push_notifications_summary_manual">WŁ. / Ręcznie: co %s</string>
     <string name="push_notifications_summary_values_seconds">%s s</string>
