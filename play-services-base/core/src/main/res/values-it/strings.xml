@@ -97,7 +97,7 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="prefcat_about">Informazioni su</string>
 
     <string name="cond_gcm_bat_title">Ottimizzazioni batteria attive</string>
-    <string name="cond_gcm_bat_summary">Hai attivato l'opzione Messaggistica Cloud ma le ottimizzazioni della batteria per i Servizi MicroG risultano attive. Per poter ricevere le notifiche push devi ignorare le suddette ottimizzioni</string>
+    <string name="cond_gcm_bat_summary">Hai attivato l\'opzione Messaggistica Cloud ma le ottimizzazioni della batteria per i Servizi MicroG risultano attive. Per poter ricevere le notifiche push devi ignorare le suddette ottimizzioni</string>
     <string name="cond_gcm_bat_action">Ignora ottimizzazioni</string>
     <string name="cond_perm_title">Permesso non concesso</string>
 
@@ -134,7 +134,7 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="gcm_registered">Registrato</string>
     <string name="gcm_registered_since">Registrato da: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
     <string name="gcm_unregister_confirm_title">Unregister <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
-    <string name="gcm_unregister_confirm_message">Alcune app non effettuano una nuova registrazione in automatico o non forniscono un'opzione manuale per farlo. Queste app potrebbero non funzionare correttamente dopo aver annullato la registrazione.\nProcedere?</string>
+    <string name="gcm_unregister_confirm_message">Alcune app non effettuano una nuova registrazione in automatico o non forniscono un\'opzione manuale per farlo. Queste app potrebbero non funzionare correttamente dopo aver annullato la registrazione.\nProcedere?</string>
     <string name="gcm_unregister_after_deny_message">Hai negato ad un\'app già registrata di potersi registrare nuovamente per mostrare notifiche push.\nIntendi annullare anche la sua attuale registrazione ora, così da non ricevere notifiche push in futuro?</string>
     <string name="gcm_messages_counter">Messaggi: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> byte)</string>
     <string name="gcm_network_state_disconnected">Disconnesso</string>
@@ -196,11 +196,7 @@ Questo potrebbe richiedere qualche minuto"</string>
 
     <!-- Settings options strings-->
 
-    <string name="wstxda">WSTxda</string>
     <string name="developer">Sviluppatore</string>
-    <string name="developer_link">https://github.com/WSTxda</string>
-    <string name="github">GitHub</string>
     <string name="github_source">Codice sorgente repository</string>
-    <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
     <string name="pref_hide_launcher_icon">Nascondi icona del launcher</string>
 </resources>
