@@ -25,7 +25,7 @@
         <item quantity="other">Dei permessi richiesti per il corretto funzionamento dei Servizi MicroG non sono stati concessi.</item>
     </plurals>
     <plurals name="cond_perm_action">
-        <item quantity="one">Richiesta permsso mancante</item>
+        <item quantity="one">Richiesta permesso mancante</item>
         <item quantity="other">Richiesta permessi mancanti</item>
     </plurals>
 </resources>
