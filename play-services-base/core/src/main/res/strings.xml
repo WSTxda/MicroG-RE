@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2020, microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="foreground_service_notification_title">Attivo in secondo piano</string>
+    <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> è in fase di esecuzione in secondo piano</string>
+    <string name="foreground_service_notification_big_text">Escludi <xliff:g example="microG Services">%1$s</xliff:g> dalla lista delle app con ottimizzazione della batteria attiva o nascondi questa notifica dalle impostazioni dell\'app</string>
+
+    <string name="menu_settings">Impostazioni</string>
+
+    <string name="list_no_item_none">Nessuno</string>
+    <string name="list_item_see_all">Vedi tutti</string>
+
+    <string name="open_app">Apri</string>
+
+    <string name="service_status_disabled">Disattivato</string>
+    <string name="service_status_enabled">Attivo</string>
+    <string name="service_status_automatic">Automatico</string>
+    <string name="service_status_manual">Manuale</string>
+    <string name="service_status_enabled_short">Attivo</string>
+    <string name="service_status_disabled_short">Disattivato</string>
+
+    <!-- Patchers names-->
+
+    <string name="vanced">Vanced</string>
+    <string name="revanced">ReVanced</string>
+    <string name="youtube_advanced">YT Advanced</string>
+    <string name="revanced_extended">ReVanced Extended</string>
+    <string name="revanced_extended_anddea">ReVanced Extended (Anddea)</string>
+    <string name="revanced_extended_rufusin">ReVanced Extended (Rufusin)</string>
+</resources>
