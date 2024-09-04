@@ -4,7 +4,6 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">MicroG</string>
     <string name="gms_settings_name">Pengaturan MicroG</string>
     <string name="gms_settings_summary">Atur layanan MicroG</string>
 
