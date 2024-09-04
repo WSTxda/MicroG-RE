@@ -58,7 +58,6 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="service_name_mcs">Pesan Awan</string>
 
     <string name="network_type_mobile">Jaringan seluler</string>
-    <string name="network_type_wifi">Wi-Fi</string>
     <string name="network_type_roaming">Roaming</string>
     <string name="network_type_other">Jaringan lainnya</string>
 
