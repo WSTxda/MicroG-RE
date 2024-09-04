@@ -18,8 +18,6 @@
 <resources>
     <string-array name="network_types" translatable="false">
         <item>seluler</item>
-        <item>wifi</item>
-        <item>roaming</item>
         <item>lainnya</item>
     </string-array>
 
