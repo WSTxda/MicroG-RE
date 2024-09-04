@@ -42,10 +42,6 @@
     <string name="about_android_support_v7_preference">Library Dukungan preferensi v7</string>
     <string name="about_android_support_license">Lisensi Apache 2.0, Proyek Sumber Terbuka Android</string>
 
-    <!-- UpdateChecker tag controller-->
-
-    <string name="github_tag_version">5.8</string>
-
     <!-- Updater strings-->
 
     <string name="check_updates">Periksa pembaruan</string>
