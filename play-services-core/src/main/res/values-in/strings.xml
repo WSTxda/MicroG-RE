@@ -196,7 +196,6 @@ Ini mungkin memerlukan beberapa menit"</string>
 
     <!-- Settings options strings-->
 
-    <string name="wstxda">WSTxda</string>
     <string name="developer">Pengembang</string>
     <string name="developer_link">https://github.com/WSTxda</string>
     <string name="github">GitHub</string>
