@@ -23,12 +23,6 @@
         <item>lainnya</item>
     </string-array>
 
-    <string-array name="network_types_names" translatables="false">
-        <item>@string/network_type_mobile</item>
-        <item>@string/network_type_wifi</item>
-        <item>@string/network_type_roaming</item>
-        <item>@string/network_type_other</item>
-    </string-array>
 
     <string-array name="gcm_network_config_values" translatables="false">
         <item>-1</item>
