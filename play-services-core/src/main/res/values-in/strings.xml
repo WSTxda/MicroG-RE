@@ -82,10 +82,6 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="self_check_name_battery_optimizations">Optimasi baterai diabaikan</string>
     <string name="self_check_resolution_battery_optimizations">Ketuk di sini untuk menonaktifkan optimasi baterai. Tidak melakukannya dapat menyebabkan masalah dalam menerima notifikasi dari YouTube dan aplikasi terdaftar lainnya</string>
 
-    <string name="self_check_pkg_revanced">ReVanced</string>
-    <string name="self_check_pkg_revanced_extended">ReVanced Extended</string>
-    <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
-    <string name="self_check_pkg_vanced">Vanced</string>
     <string name="self_check_revanced_name_app_installed">Berjalan dengan <xliff:g example="F-Droid">%1$s</xliff:g></string>
     <string name="self_check_revanced_resolution_app_installed">Aplikasi <xliff:g example="F-Droid">%1$s</xliff:g> tidak ditemukan, kompilasi atau instal apk yang dimodifikasi</string>
 
