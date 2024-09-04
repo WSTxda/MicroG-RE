@@ -73,7 +73,6 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="self_check_resolution_system_spoofs">Silakan periksa dokumentasi tentang langkah-langkah yang mungkin diperlukan</string>
 
     <string name="self_check_pkg_gms">Layanan Play</string>
-    <string name="self_check_pkg_vending">Play Store</string>
     <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> terinstal</string>
     <string name="self_check_resolution_app_installed">Instal aplikasi <xliff:g example="F-Droid">%1$s</xliff:g> atau yang kompatibel. Silakan periksa dokumentasi tentang aplikasi mana yang kompatibel</string>
     <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> tanda tangan yang benar</string>
