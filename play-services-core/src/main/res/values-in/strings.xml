@@ -191,6 +191,5 @@ Ini mungkin memerlukan beberapa menit"</string>
 
     <string name="developer">Pengembang</string>
     <string name="github_source">Repositori kode sumber</string>
-    <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
     <string name="pref_hide_launcher_icon">Sembunyikan ikon di peluncur</string>
 </resources>
