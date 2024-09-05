@@ -21,8 +21,6 @@
         <item>lainnya</item>
     </string-array>
 
-
-
         <!-- These will be automatically generated from the OS, no need to translate them -->
         <item>Interval Ping: 60 detik</item>
         <item>Interval Ping: 2 menit</item>
