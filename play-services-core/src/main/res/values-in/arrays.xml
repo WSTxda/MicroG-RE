@@ -21,6 +21,8 @@
         <item>lainnya</item>
     </string-array>
 
+    <string-array name="gcm_network_config_names" translatables="false">
+
         <!-- These will be automatically generated from the OS, no need to translate them -->
         <item>Interval Ping: 60 detik</item>
         <item>Interval Ping: 2 menit</item>
