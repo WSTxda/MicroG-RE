@@ -145,7 +145,7 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="pref_push_app_allow_register_summary">Consenti all\'app di registrarsi per mostrare notifiche push</string>
     <string name="pref_push_app_wake_for_delivery_title">Inizializza app su notifiche push</string>
     <string name="pref_push_app_wake_for_delivery_summary">Inizializza l\'app mentre è in secondo piano per ricevere le notifiche push in arrivo</string>
-    <string name="prefcat_push_apps_title">App che utilizzano notifiche push</string>
+    <string name="prefcat_push_apps_title">App che utilizzano le notifiche push</string>
     <string name="prefcat_push_apps_registered_title">App registrate</string>
     <string name="prefcat_push_apps_unregistered_title">App non registrate</string>
     <string name="prefcat_push_networks_title">Reti che utilizzano le notifiche push</string>
