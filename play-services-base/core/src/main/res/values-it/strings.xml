@@ -16,10 +16,10 @@
 
     <string name="open_app">Apri</string>
 
-    <string name="service_status_disabled">Disattivato</string>
-    <string name="service_status_enabled">Attivo</string>
-    <string name="service_status_automatic">Automatico</string>
+    <string name="service_status_disabled">Disattivata</string>
+    <string name="service_status_enabled">Attiva</string>
+    <string name="service_status_automatic">Automatica</string>
     <string name="service_status_manual">Manuale</string>
-    <string name="service_status_enabled_short">Attivo</string>
-    <string name="service_status_disabled_short">Disattivato</string>
+    <string name="service_status_enabled_short">Attiva</string>
+    <string name="service_status_disabled_short">Disattivata</string>
 </resources>
