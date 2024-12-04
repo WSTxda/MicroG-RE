@@ -23,7 +23,6 @@ android {
     buildToolsVersion "$androidBuildVersionTools"
 
     defaultConfig {
-        versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
 
@@ -35,12 +34,11 @@ android {
         targetCompatibility = 1.8
     }
 
-    lintOptions {
-        // TODO: Remove MissingTranslation once we have stable strings and proper translations.
-        disable 'MissingTranslation'
-    }
     buildFeatures {
         buildConfig true
+    }
+    lint {
+        disable 'MissingTranslation'
     }
 }
 

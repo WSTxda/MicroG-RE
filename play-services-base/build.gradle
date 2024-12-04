@@ -34,7 +34,6 @@ android {
     }
 
     defaultConfig {
-        versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
 
@@ -53,8 +52,11 @@ description = 'microG implementation of play-services-base'
 
 dependencies {
     // Dependencies from play-services-base:18.1.0
+    //noinspection GradleDependency
     api "androidx.collection:collection:1.0.0"
+    //noinspection GradleDependency
     api "androidx.core:core:1.2.0"
+    //noinspection OutdatedLibrary
     api "androidx.fragment:fragment:1.0.0"
     api project(':play-services-basement')
     api project(':play-services-tasks')

@@ -20,8 +20,11 @@ apply plugin: 'signing'
 
 dependencies {
     // Dependencies from play-services-basement:18.1.0
+    //noinspection GradleDependency
     api "androidx.collection:collection:1.0.0"
+    //noinspection GradleDependency
     api "androidx.core:core:1.2.0"
+    //noinspection OutdatedLibrary
     api "androidx.fragment:fragment:1.0.0"
 
     annotationProcessor project(':safe-parcel-processor')
@@ -46,7 +49,6 @@ android {
     }
 
     defaultConfig {
-        versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
         buildConfigField "int", "VERSION_CODE", "$appVersionCode"

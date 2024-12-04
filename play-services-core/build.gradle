@@ -22,17 +22,21 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompatVersion"
     implementation "androidx.mediarouter:mediarouter:$mediarouterVersion"
     implementation "androidx.preference:preference-ktx:$preferenceVersion"
+    //noinspection GradleDependency
     implementation "androidx.webkit:webkit:$webkitVersion"
 
     // Material Components
     implementation "com.google.android.material:material:$materialVersion"
 
     // Navigation
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
     implementation "com.android.volley:volley:$volleyVersion"
 
+    //noinspection GradleDependency
     implementation "androidx.lifecycle:lifecycle-service:$lifecycleVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 }
@@ -60,6 +64,7 @@ android {
         multiDexKeepProguard file('multidex-keep.pro')
 
         ndk {
+            //noinspection ChromeOsAbiSupport
             abiFilters "armeabi-v7a", "arm64-v8a"
         }
 
@@ -80,6 +85,7 @@ android {
     }
 
     buildFeatures {
+        //noinspection DataBindingWithoutKapt
         dataBinding = true
     }
 
@@ -89,9 +95,6 @@ android {
         }
     }
 
-    lintOptions {
-        disable 'MissingTranslation', 'InvalidPackage', 'BatteryLife', 'ImpliedQuantity', 'MissingQuantity', 'InvalidWakeLockTag', 'UniquePermission'
-    }
 
     buildTypes {
         release {
@@ -121,10 +124,15 @@ android {
     }
 
     packagingOptions {
-        exclude 'META-INF/ASL2.0'
         jniLibs {
             useLegacyPackaging true
         }
+        resources {
+            excludes += ['META-INF/ASL2.0']
+        }
+    }
+    lint {
+        disable 'MissingTranslation', 'InvalidPackage', 'BatteryLife', 'ImpliedQuantity', 'MissingQuantity', 'InvalidWakeLockTag', 'UniquePermission'
     }
 }
 

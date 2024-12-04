@@ -32,7 +32,7 @@ buildscript {
     ext.wearableVersion = '0.1.1'
     ext.wireVersion = '5.0.0'
 
-    ext.androidBuildGradleVersion = '8.5.1'
+    ext.androidBuildGradleVersion = '8.7.3'
 
     ext.androidBuildVersionTools = '34.0.0'
 
@@ -85,7 +85,7 @@ allprojects {
     ext.appVersionName = 5.9
     ext.appVersionCode = 243864000
     ext.baseVersion = ext.appVersionCode.toString()[0..1] + '.' + ext.appVersionCode.toString()[2..3] + '.' + ext.appVersionCode.toString()[4..5]
-    version = ext.appVersionName+" GMS-"+ext.baseVersion.replaceAll("\\.", "")
+    version = ext.appVersionName+" GMS-"+ext.baseVersion.replaceAll('\\.', "")
     ext.isReleaseVersion = false
 }
 

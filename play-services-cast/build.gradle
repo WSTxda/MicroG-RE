@@ -21,7 +21,6 @@ android {
     }
 
     defaultConfig {
-        versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
@@ -38,7 +37,9 @@ description = 'microG implementation of play-services-cast'
 
 dependencies {
     // Dependencies from play-services-cast:21.2.0
+    //noinspection GradleDependency
     api "androidx.core:core:1.0.0"
+    //noinspection GradleDependency
     api "androidx.mediarouter:mediarouter:1.2.2"
     api project(':play-services-base')
     api project(':play-services-basement')
