@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2013 The Android Open Source Project
   ~ Copyright (C) 2013-2017 microG Project Team
   ~
@@ -18,24 +17,24 @@
 
 <!-- text that appears when the recent app list is empty -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:paddingEnd="?android:attr/scrollbarSize"
-    android:paddingRight="?android:attr/scrollbarSize">
+    tools:ignore="RtlSymmetry">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
         android:layout_marginBottom="6dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        tools:ignore="UselessParent">
 
         <TextView
             android:id="@android:id/title"
@@ -44,8 +43,6 @@
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="?android:attr/textColorSecondary" />
-
     </RelativeLayout>
-
 </LinearLayout>
 

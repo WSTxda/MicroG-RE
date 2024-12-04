@@ -48,7 +48,5 @@
             android:text="@string/gcm_allow_app_popup"
             android:textAppearance="?attr/textAppearanceTitleMedium">
         </TextView>
-
     </LinearLayout>
-
 </ScrollView>

@@ -25,7 +25,6 @@
 
         <LinearLayout
             android:layout_marginVertical="12dp"
-            android:layout_marginLeft="12dp"
             android:layout_marginStart="12dp"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"

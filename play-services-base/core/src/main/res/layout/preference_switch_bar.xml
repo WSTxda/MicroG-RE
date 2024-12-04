@@ -27,7 +27,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="?android:textColorPrimaryInverse"
         android:textSize="18sp"
-        tools:text="Enabled" />
+        tools:text="Enabled"
+        tools:ignore="RtlSymmetry" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_widget"

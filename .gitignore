@@ -13,3 +13,10 @@ local.properties
 .project
 *.apk
 play-services-core/default/release/
+/.kotlin
+
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+package.properties

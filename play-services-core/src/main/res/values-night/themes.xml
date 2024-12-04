@@ -18,11 +18,6 @@
         <item name="android:listPreferredItemPaddingStart">@dimen/settings_listPreferredItemPaddingStart</item>
         <item name="android:listPreferredItemPaddingEnd">@dimen/settings_listPreferredItemPaddingEnd</item>
         <!-- Theme Colors -->
-        <item name="colorControlNormal">?colorOnSurfaceVariant</item>
-        <item name="android:colorAccent">?colorPrimary</item>
-        <item name="android:textColorPrimary">?colorOnSurface</item>
-        <item name="android:textColorSecondary">?colorOnSurfaceVariant</item>
-
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>

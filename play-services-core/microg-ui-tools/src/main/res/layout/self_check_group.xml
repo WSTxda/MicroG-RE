@@ -18,8 +18,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="start">
+    android:gravity="start"
+    android:orientation="vertical">
 
     <TextView
         android:id="@android:id/title"
@@ -31,14 +31,13 @@
         android:paddingTop="16dp"
         android:paddingEnd="?android:listPreferredItemPaddingEnd"
         android:paddingRight="?attr/listPreferredItemPaddingRight"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
         android:textColor="?android:colorAccent" />
 
     <LinearLayout
         android:id="@+id/group_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="end"/>
-
+        android:gravity="end"
+        android:orientation="vertical" />
 </LinearLayout>

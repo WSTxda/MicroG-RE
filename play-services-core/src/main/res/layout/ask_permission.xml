@@ -57,7 +57,6 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginEnd="-3dp"
-            android:layout_marginRight="-3dp"
             android:background="@drawable/circle_shape_background"
             android:padding="10dp">
 
@@ -132,5 +131,4 @@
             android:layout_height="wrap_content"
             android:text="@string/allow" />
     </LinearLayout>
-
 </LinearLayout>

@@ -3,7 +3,8 @@
   ~ SPDX-FileCopyrightText: 2023 microG Project Team
   ~ SPDX-License-Identifier: Apache-2.0
   -->
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card"
     style="?attr/materialCardViewFilledStyle"
@@ -19,10 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="20dp">
+        android:padding="20dp">
 
         <ImageView
             android:id="@android:id/icon"
@@ -30,6 +28,7 @@
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:antialias="true"
+            android:importantForAccessibility="no"
             android:scaleType="fitCenter" />
 
         <TextView

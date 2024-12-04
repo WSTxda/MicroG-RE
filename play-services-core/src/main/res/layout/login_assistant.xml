@@ -16,6 +16,7 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -24,7 +25,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -48,6 +50,7 @@
                     android:layout_width="54dp"
                     android:layout_height="54dp"
                     android:layout_marginBottom="20dp"
+                    android:importantForAccessibility="no"
                     android:minWidth="54dp"
                     android:src="@drawable/ic_logo" />
 
@@ -96,6 +99,5 @@
                 android:layout_height="64dp"
                 android:textAppearance="?attr/textAppearanceTitleMedium" />
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>

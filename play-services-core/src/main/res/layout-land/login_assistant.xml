@@ -99,6 +99,5 @@
                 android:layout_height="64dp"
                 android:textAppearance="?attr/textAppearanceTitleMedium" />
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>
