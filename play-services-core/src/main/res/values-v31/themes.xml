@@ -6,6 +6,7 @@
         <item name="android:textAppearanceListItem">@style/Theme.TextAppearance.PreferenceTitle</item>
         <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
         <item name="snackbarStyle">@style/AppTheme.Snackbar</item>
+        <item  name="android:windowActivityTransitions">true</item>
         <!-- Layout padding -->
         <item name="android:listPreferredItemHeightSmall">@dimen/settings_listPreferredItemHeightSmall</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/settings_listPreferredItemPaddingStart</item>
