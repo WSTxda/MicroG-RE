@@ -191,7 +191,8 @@ Questo potrebbe richiedere qualche minuto"</string>
     <string name="dialog_message_remove_account">Sei sicuro di voler rimuovere questo account?\n\nAlcuni servizi e funzionalità non saranno più disponibili\n\nI tuoi dati non andranno persi</string>
     <string name="dialog_confirm_button">Rimuovi</string>
     <string name="dialog_cancel_button">Annulla</string>
-    <string name="toast_remove_account_success">Account %s rimosso</string>
+    <string name="snackbar_remove_account">Account %s rimosso</string>
+    <string name="snackbar_undo_button">Annulla</string>
 
     <!-- Settings options strings-->
 

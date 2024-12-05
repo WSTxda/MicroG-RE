@@ -184,7 +184,8 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="dialog_message_remove_account">Apakah Anda yakin ingin menghapus akun ini?\n\nBeberapa layanan dan fungsi akan tidak tersedia\n\nData Anda tidak akan hilang</string>
     <string name="dialog_confirm_button">Hapus</string>
     <string name="dialog_cancel_button">Batal</string>
-    <string name="toast_remove_account_success">Akun %s dihapus</string>
+    <string name="snackbar_remove_account">Akun %s dihapus</string>
+    <string name="snackbar_undo_button">Batalkan</string>
 
     <!-- Settings options strings-->
 

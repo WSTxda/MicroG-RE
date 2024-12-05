@@ -94,6 +94,10 @@
         <item name="iconSpaceReserved">@bool/settings_config_icon_space_reserved</item>
     </style>
 
+    <style name="AppTheme.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="android:layout_margin">24dp</item>
+    </style>
+
     <!-- Text application theme -->
 
     <style name="Theme.TextAppearance.PreferenceTitle" parent="@style/TextAppearance.Material3.TitleMedium" />
@@ -126,6 +130,7 @@
         <!-- Theming -->
         <item name="android:textAppearanceListItem">@style/Theme.TextAppearance.PreferenceTitle</item>
         <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
+        <item name="snackbarStyle">@style/AppTheme.Snackbar</item>
         <!-- Layout padding -->
         <item name="android:listPreferredItemHeightSmall">@dimen/settings_listPreferredItemHeightSmall</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/settings_listPreferredItemPaddingStart</item>
@@ -180,5 +185,4 @@
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
-
 </resources>

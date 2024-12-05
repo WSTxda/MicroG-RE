@@ -187,7 +187,8 @@
     <string name="dialog_message_remove_account">هل أنت متأكد أنك تريد إزالة هذا الحساب؟\n\nبعض الخدمات والوظائف ستكون غير متاحة\n\nلن تُفقد بياناتك</string>
     <string name="dialog_confirm_button">إزالة</string>
     <string name="dialog_cancel_button">إلغاء</string>
-    <string name="toast_remove_account_success">تمت إزالة %s</string>
+    <string name="snackbar_remove_account">تمت إزالة %s</string>
+    <string name="snackbar_undo_button">تراجع</string>
 
     <!-- Settings options strings-->
 

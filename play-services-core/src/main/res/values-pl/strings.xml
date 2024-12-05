@@ -173,7 +173,8 @@
     <string name="dialog_message_remove_account">Czy na pewno chcesz usunąć to konto?\n\nNiektóre usługi i funkcje będą niedostępne.\nDane nie zostaną usunięte.</string>
     <string name="dialog_confirm_button">Usuń</string>
     <string name="dialog_cancel_button">Anuluj</string>
-    <string name="toast_remove_account_success">Usunięto: %s</string>
+    <string name="snackbar_remove_account">Usunięto: %s</string>
+    <string name="snackbar_undo_button">Cofnij</string>
 
     <!-- Informacje -->
 

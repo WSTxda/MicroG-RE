@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import androidx.lifecycle.lifecycleScope
@@ -20,6 +19,7 @@ import androidx.preference.PreferenceFragmentCompat
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.transition.platform.MaterialSharedAxis
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -93,6 +93,7 @@ class AccountsFragment : PreferenceFragmentCompat() {
             startActivity(intent)
         } catch (e: ActivityNotFoundException) {
             Log.e(tag, errorMessage, e)
+            showSnackbar(errorMessage)
         }
     }
 
@@ -175,24 +176,42 @@ class AccountsFragment : PreferenceFragmentCompat() {
     }
 
     private fun removeAccount(accountName: String) {
-        lifecycleScope.launch(Dispatchers.Main) {
-            val accountManager = AccountManager.get(requireContext())
-            val accounts = accountManager.getAccountsByType(AuthConstants.DEFAULT_ACCOUNT_TYPE)
-            val accountToRemove = accounts.firstOrNull { it.name == accountName }
+        val rootView = view ?: return
+        val accountManager = AccountManager.get(requireContext())
+        val accounts = accountManager.getAccountsByType(AuthConstants.DEFAULT_ACCOUNT_TYPE)
+        val accountToRemove = accounts.firstOrNull { it.name == accountName }
 
-            accountToRemove?.let {
-                try {
-                    val removedSuccessfully = withContext(Dispatchers.IO) {
-                        accountManager.removeAccountExplicitly(it)
-                    }
-                    if (removedSuccessfully) {
-                        refreshAccountSettings()
-                        showToast(getString(R.string.toast_remove_account_success, accountName))
-                    }
-                } catch (e: Exception) {
-                    Log.e(tag, "Error removing account", e)
-                }
+        accountToRemove?.let {
+            val snackbar = Snackbar.make(
+                rootView,
+                getString(R.string.snackbar_remove_account, accountName),
+                Snackbar.LENGTH_LONG
+            )
+
+            var cancelRemoval = false
+
+            snackbar.setAction(getString(R.string.snackbar_undo_button)) {
+                cancelRemoval = true
             }
+
+            snackbar.addCallback(object : Snackbar.Callback() {
+                override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
+                    if (!cancelRemoval) {
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            try {
+                                val removedSuccessfully = accountManager.removeAccountExplicitly(it)
+                                if (removedSuccessfully) {
+                                    withContext(Dispatchers.Main) {
+                                        refreshAccountSettings()
+                                    }
+                                }
+                            } catch (_: Exception) {
+                            }
+                        }
+                    }
+                }
+            })
+            snackbar.show()
         }
     }
 
@@ -216,7 +235,9 @@ class AccountsFragment : PreferenceFragmentCompat() {
         }
     }
 
-    private fun showToast(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    private fun showSnackbar(message: String) {
+        view?.let {
+            Snackbar.make(it, message, Snackbar.LENGTH_LONG).show()
+        }
     }
 }
