@@ -6,7 +6,7 @@
     style="?attr/materialCardViewFilledStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="18dp"
+    android:layout_margin="17dp"
     android:clickable="true"
     android:focusable="true"
     app:cardBackgroundColor="?colorSecondaryContainer"
