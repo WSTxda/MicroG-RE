@@ -73,7 +73,7 @@ class AccountsFragment : PreferenceFragmentCompat() {
         }
 
         findPreference<Preference>("pref_privacy")?.setOnPreferenceClickListener {
-            startActivitySafely(LegacyAccountSettingsActivity::class.java, "Failed to launch privacy activity")
+            startActivitySafely(PrivacySettingsActivity::class.java, "Failed to launch privacy activity")
             true
         }
 

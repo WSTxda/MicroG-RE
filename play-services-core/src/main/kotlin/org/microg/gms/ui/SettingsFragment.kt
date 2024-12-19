@@ -37,6 +37,7 @@ class SettingsFragment : ResourceSettingsFragment() {
     companion object {
         const val PREF_ABOUT = "pref_about"
         const val PREF_GCM = "pref_gcm"
+        const val PREF_PRIVACY = "pref_privacy"
         const val PREF_CHECKIN = "pref_checkin"
         const val PREF_ACCOUNTS = "pref_accounts"
         const val PREF_HIDE_LAUNCHER_ICON = "pref_hide_launcher_icon"
@@ -58,6 +59,10 @@ class SettingsFragment : ResourceSettingsFragment() {
         }
         findPreference<Preference>(PREF_GCM)!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
             findNavController().navigate(requireContext(), R.id.openGcmSettings)
+            true
+        }
+        findPreference<Preference>(PREF_PRIVACY)!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            findNavController().navigate(requireContext(), R.id.privacyFragment)
             true
         }
         findPreference<Preference>(PREF_ABOUT)!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {

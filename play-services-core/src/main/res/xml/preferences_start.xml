@@ -24,42 +24,48 @@
         android:title="@string/cond_gcm_bat_action"
         app:layout="@layout/preference_material_card_view" />
 
-        <Preference
-            android:icon="@drawable/ic_accounts"
-            android:key="pref_accounts"
-            android:summary="@string/pref_accounts_summary"
-            android:title="@string/pref_account_title" />
+    <Preference
+        android:icon="@drawable/ic_accounts"
+        android:key="pref_accounts"
+        android:summary="@string/pref_accounts_summary"
+        android:title="@string/pref_account_title" />
 
-        <Preference
-            android:icon="@drawable/ic_device_login"
-            android:key="pref_checkin"
-            android:title="@string/service_name_checkin" />
+    <Preference
+        android:icon="@drawable/ic_device_login"
+        android:key="pref_checkin"
+        android:title="@string/service_name_checkin" />
 
-        <Preference
-            android:icon="@drawable/ic_cloud_messaging"
-            android:key="pref_gcm"
-            android:title="@string/service_name_mcs" />
+    <Preference
+        android:icon="@drawable/ic_privacy"
+        android:key="pref_privacy"
+        android:summary="@string/pref_privacy_summary"
+        android:title="@string/pref_privacy_title" />
 
-        <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/ic_hide_launcher_icon"
-            android:key="pref_hide_launcher_icon"
-            android:title="@string/pref_hide_launcher_icon" />
+    <Preference
+        android:icon="@drawable/ic_cloud_messaging"
+        android:key="pref_gcm"
+        android:title="@string/service_name_mcs" />
 
-        <Preference
-            android:icon="@drawable/ic_developer"
-            android:key="pref_developer"
-            android:summary="@string/developer"
-            android:title="@string/wstxda" />
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/ic_hide_launcher_icon"
+        android:key="pref_hide_launcher_icon"
+        android:title="@string/pref_hide_launcher_icon" />
 
-        <Preference
-            android:icon="@drawable/ic_github"
-            android:key="pref_github"
-            android:summary="@string/github_source"
-            android:title="@string/github" />
+    <Preference
+        android:icon="@drawable/ic_developer"
+        android:key="pref_developer"
+        android:summary="@string/developer"
+        android:title="@string/wstxda" />
 
-        <Preference
-            android:icon="@drawable/ic_information"
-            android:key="pref_about"
-            android:title="@string/pref_about_title" />
+    <Preference
+        android:icon="@drawable/ic_github"
+        android:key="pref_github"
+        android:summary="@string/github_source"
+        android:title="@string/github" />
+
+    <Preference
+        android:icon="@drawable/ic_information"
+        android:key="pref_about"
+        android:title="@string/pref_about_title" />
 </PreferenceScreen>

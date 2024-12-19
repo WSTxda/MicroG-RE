@@ -441,7 +441,7 @@
             android:taskAffinity="org.microg.gms.settings" />
 
         <activity
-            android:name="org.microg.gms.ui.LegacyAccountSettingsActivity"
+            android:name="org.microg.gms.ui.PrivacySettingsActivity"
             android:label="@string/pref_privacy_title"
             android:process=":ui"
             android:taskAffinity="org.microg.gms.settings" />

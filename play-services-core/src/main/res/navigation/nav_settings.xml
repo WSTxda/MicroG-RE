@@ -44,6 +44,13 @@
         android:name="org.microg.gms.ui.AccountsFragment"
         android:label="@string/pref_account_title" />
 
+    <!-- Privacy-->
+
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="org.microg.gms.ui.PrivacyFragment"
+        android:label="@string/pref_privacy_title" />
+
     <!-- Push Notifications -->
 
     <fragment
