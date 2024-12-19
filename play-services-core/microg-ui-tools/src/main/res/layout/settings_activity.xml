@@ -38,6 +38,7 @@
             app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
             app:expandedTitleMarginStart="@dimen/expanded_title_margin_start"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:maxLines="2"
             app:scrimVisibleHeightTrigger="@dimen/scrim_visible_height_trigger"
             app:titleCollapseMode="scale">
 
