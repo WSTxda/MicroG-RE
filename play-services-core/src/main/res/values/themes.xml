@@ -41,9 +41,9 @@
     <style name="Theme.Base.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
         <item name="preferenceStyle">@style/Theme.Base.SettingsPreference</item>
         <item name="preferenceCategoryStyle">@style/Settings.CategoryPreference</item>
-        <item name="preferenceCategoryTitleTextAppearance">@style/Theme.TextAppearance.CategoryTitle</item>
-        <item name="switchPreferenceCompatStyle">@style/Theme.Base.Preference.SwitchPreferenceCompat</item>
-        <item name="switchBarPreferenceStyle">@style/Theme.Base.Preference.SwitchBarPreference</item>
+        <item name="preferenceCategoryTitleTextAppearance">@style/TextAppearance.Preference.Category.Title</item>
+        <item name="switchPreferenceCompatStyle">@style/Component.SwitchPreferenceCompat</item>
+        <item name="switchBarPreferenceStyle">@style/Component.SwitchBarPreference</item>
     </style>
 
     <style name="Theme.Base.SettingsPreference" parent="@style/Preference.Material">
@@ -53,12 +53,12 @@
 
     <!-- Components application theme -->
 
-    <style name="Theme.Base.Preference.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+    <style name="Component.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="widgetLayout">@layout/preference_material_switch</item>
         <item name="layout">@layout/settings_preference</item>
     </style>
 
-    <style name="Theme.Base.Preference.SwitchBarPreference" parent="@style/Preference.SwitchBar">
+    <style name="Component.SwitchBarPreference" parent="@style/Preference.SwitchBar">
         <item name="layout">@layout/preference_material_switch_bar</item>
         <item name="switchBarFrameId">@id/frame</item>
         <item name="switchBarFrameBackgroundOn">@drawable/material_switch_bar_background_on</item>
@@ -66,7 +66,7 @@
         <item name="switchBarFrameBackgroundDisabled">@drawable/material_switch_bar_background_disabled</item>
     </style>
 
-    <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="Component.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:colorBackground">?colorSurfaceContainer</item>
         <item name="android:listPreferredItemHeightSmall">48dp</item>
         <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
@@ -74,18 +74,22 @@
         <item name="dialogCornerRadius">@dimen/settings_dialog_corner_radius</item>
     </style>
 
-    <style name="AppTheme.Dialog" parent="AppThemeBase">
+    <style name="Component.Dialog" parent="AppThemeBase">
         <item name="android:windowIsFloating">true</item>
-        <item name="colorBackgroundFloating">?colorSurface</item>
+        <item name="colorBackgroundFloating">?colorSurfaceContainer</item>
     </style>
 
-    <style name="AppTheme.Dialog.Account" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="Component.AlertDialog.RemoveAccount" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:colorBackground">?colorSurfaceContainer</item>
         <item name="android:listPreferredItemHeightSmall">48dp</item>
         <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="dialogCornerRadius">@dimen/settings_dialog_corner_radius</item>
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.PositiveButton.Warning</item>
+        <item name="buttonBarPositiveButtonStyle">@style/TextAppearance.PositiveButton.Warning</item>
+    </style>
+
+    <style name="Component.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="android:layout_margin">24dp</item>
     </style>
 
     <style name="Settings.CategoryPreference" parent="@style/Preference.Category.Material">
@@ -94,17 +98,13 @@
         <item name="iconSpaceReserved">@bool/settings_config_icon_space_reserved</item>
     </style>
 
-    <style name="AppTheme.Snackbar" parent="Widget.Material3.Snackbar">
-        <item name="android:layout_margin">24dp</item>
-    </style>
+    <!-- Text application appearance -->
 
-    <!-- Text application theme -->
+    <style name="TextAppearance.Preference.Title" parent="@style/TextAppearance.Material3.TitleMedium" />
 
-    <style name="Theme.TextAppearance.PreferenceTitle" parent="@style/TextAppearance.Material3.TitleMedium" />
+    <style name="TextAppearance.Preference.Category.Title" parent="@style/TextAppearance.Material3.LabelLarge" />
 
-    <style name="Theme.TextAppearance.CategoryTitle" parent="@style/TextAppearance.Material3.LabelLarge" />
-
-    <style name="Theme.PositiveButton.Warning" parent="Widget.Material3.Button.TextButton.Dialog">
+    <style name="TextAppearance.PositiveButton.Warning" parent="Widget.Material3.Button.TextButton.Dialog">
         <item name="android:textColor">?colorError</item>
         <item name="rippleColor">?colorErrorContainer</item>
     </style>
@@ -128,9 +128,9 @@
 
     <style name="AppThemeBase" parent="Theme.Base.DayNight.NoActionBar">
         <!-- Theming -->
-        <item name="android:textAppearanceListItem">@style/Theme.TextAppearance.PreferenceTitle</item>
-        <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
-        <item name="snackbarStyle">@style/AppTheme.Snackbar</item>
+        <item name="android:textAppearanceListItem">@style/TextAppearance.Preference.Title</item>
+        <item name="alertDialogTheme">@style/Component.AlertDialog</item>
+        <item name="snackbarStyle">@style/Component.Snackbar</item>
         <item  name="android:windowActivityTransitions">true</item>
         <!-- Layout padding -->
         <item name="android:listPreferredItemHeightSmall">@dimen/settings_listPreferredItemHeightSmall</item>

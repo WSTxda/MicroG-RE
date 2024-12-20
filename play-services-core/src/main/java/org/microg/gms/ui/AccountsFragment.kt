@@ -165,7 +165,7 @@ class AccountsFragment : PreferenceFragmentCompat() {
     }
 
     private fun showAccountRemovalDialog(accountName: String) {
-        AlertDialog.Builder(requireContext(), R.style.AppTheme_Dialog_Account)
+        AlertDialog.Builder(requireContext(), R.style.Component_AlertDialog_RemoveAccount)
             .setTitle(getString(R.string.dialog_title_remove_account))
             .setMessage(getString(R.string.dialog_message_remove_account))
             .setPositiveButton(getString(R.string.dialog_confirm_button)) { _, _ ->

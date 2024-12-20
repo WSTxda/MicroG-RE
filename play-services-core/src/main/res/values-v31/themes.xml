@@ -3,9 +3,9 @@
 
     <style name="AppThemeBase" parent="Theme.Base.DayNight.NoActionBar">
         <!-- Theming -->
-        <item name="android:textAppearanceListItem">@style/Theme.TextAppearance.PreferenceTitle</item>
-        <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
-        <item name="snackbarStyle">@style/AppTheme.Snackbar</item>
+        <item name="android:textAppearanceListItem">@style/TextAppearance.Preference.Title</item>
+        <item name="alertDialogTheme">@style/Component.AlertDialog</item>
+        <item name="snackbarStyle">@style/Component.Snackbar</item>
         <item  name="android:windowActivityTransitions">true</item>
         <!-- Layout padding -->
         <item name="android:listPreferredItemHeightSmall">@dimen/settings_listPreferredItemHeightSmall</item>
