@@ -21,6 +21,7 @@
             android:key="pref_device_profile"
             android:persistent="false"
             android:title="@string/pref_device_registration_select_profile_title"
+            app:dialogIcon="@drawable/ic_profile_device"
             app:iconSpaceReserved="false"
             tools:summary="Automatic (Google Pixel 3, Android 11)" />
 

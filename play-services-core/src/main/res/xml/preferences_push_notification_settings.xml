@@ -34,40 +34,44 @@
             android:defaultValue="0"
             android:entries="@array/gcm_network_config_names"
             android:entryValues="@array/gcm_network_config_values"
-            android:key="gcm_network_mobile"
-            android:persistent="false"
-            android:summary="ON / Automatic: 13 min"
-            android:title="@string/network_type_mobile"
-            app:iconSpaceReserved="false" />
-
-        <ListPreference
-            android:defaultValue="0"
-            android:entries="@array/gcm_network_config_names"
-            android:entryValues="@array/gcm_network_config_values"
+            android:icon="@drawable/ic_network_wifi"
             android:key="gcm_network_wifi"
             android:persistent="false"
             android:summary="ON / Manual: 30 min"
             android:title="@string/network_type_wifi"
-            app:iconSpaceReserved="false" />
+            app:dialogIcon="@drawable/ic_network_wifi" />
 
         <ListPreference
             android:defaultValue="0"
             android:entries="@array/gcm_network_config_names"
             android:entryValues="@array/gcm_network_config_values"
+            android:icon="@drawable/ic_network_mobile_data"
+            android:key="gcm_network_mobile"
+            android:persistent="false"
+            android:summary="ON / Automatic: 13 min"
+            android:title="@string/network_type_mobile"
+            app:dialogIcon="@drawable/ic_network_mobile_data" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/gcm_network_config_names"
+            android:entryValues="@array/gcm_network_config_values"
+            android:icon="@drawable/ic_network_roaming"
             android:key="gcm_network_roaming"
             android:persistent="false"
             android:summary="OFF"
             android:title="@string/network_type_roaming"
-            app:iconSpaceReserved="false" />
+            app:dialogIcon="@drawable/ic_network_roaming" />
 
         <ListPreference
             android:defaultValue="0"
             android:entries="@array/gcm_network_config_names"
             android:entryValues="@array/gcm_network_config_values"
+            android:icon="@drawable/ic_network_others"
             android:key="gcm_network_other"
             android:persistent="false"
             android:summary="ON / Automatic: 30 min"
             android:title="@string/network_type_other"
-            app:iconSpaceReserved="false" />
+            app:dialogIcon="@drawable/ic_network_others" />
     </PreferenceCategory>
 </PreferenceScreen>
