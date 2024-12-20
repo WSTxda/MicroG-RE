@@ -49,6 +49,8 @@
     <string name="no_update_available">أنت على أحدث إصدار</string>
     <string name="check_updates_error">غير قادر على التحقق من التحديثات</string>
 
+    <string name="snackbar_button_download">تنزيل</string>
+
     <string name="error_connection">خطأ في الاتصال:</string>
     <string name="error_others">خطأ:</string>
 </resources>

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -16,133 +15,96 @@ import org.microg.tools.ui.R;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.CompletableFuture;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class UpdateChecker {
 
     private static final String GITHUB_API_URL = "https://api.github.com/repos/WSTxda/MicroG-RE/releases/latest";
     private static final String GITHUB_RELEASE_LINK = "https://github.com/WSTxda/MicroG-RE/releases/latest";
-    private static final String ERROR_NO_RESPONSE = "ERROR_NO_RESPONSE";
-    private static final String TAG = "UpdateChecker";
 
     private final WeakReference<Context> contextRef;
+    private final OkHttpClient client;
 
     public UpdateChecker(Context context) {
         this.contextRef = new WeakReference<>(context);
+        this.client = new OkHttpClient.Builder().retryOnConnectionFailure(true).build();
     }
 
     public void checkForUpdates() {
-        Executor executor = Executors.newSingleThreadExecutor();
-        FutureTask<String> futureTask = new FutureTask<>(this::doInBackground);
-
-        executor.execute(futureTask);
-
-        try {
-            String latestVersion = futureTask.get();
-            onPostExecute(latestVersion);
-        } catch (Exception e) {
-            handleUpdateError(e);
-        }
+        CompletableFuture.supplyAsync(this::fetchLatestVersion).thenAccept(this::handleLatestVersion).exceptionally(throwable -> {
+            handleError(throwable);
+            return null;
+        });
     }
 
-    private String doInBackground() {
-        OkHttpClient client = new OkHttpClient();
+    private String fetchLatestVersion() {
         Request request = new Request.Builder().url(GITHUB_API_URL).build();
 
         try (Response response = client.newCall(request).execute()) {
-            if (response.isSuccessful()) {
-                ResponseBody responseBody = response.body();
-                if (responseBody != null) {
-                    String jsonData = responseBody.string();
-                    return parseLatestVersion(jsonData);
-                } else {
-                    throw new IOException("Response body is null");
-                }
+            if (response.isSuccessful() && response.body() != null) {
+                String jsonData = response.body().string();
+                return parseLatestVersion(jsonData);
             } else {
                 throw new IOException("Unsuccessful response: " + response.code());
             }
         } catch (IOException e) {
-            Log.e(TAG, "Error during network call", e);
-            return handleRequestError(e);
+            throw new RuntimeException("Connection error", e);
         }
     }
 
     private String parseLatestVersion(String jsonData) {
         try {
-            return new JSONObject(jsonData).optString("tag_name", "");
+            JSONObject jsonObject = new JSONObject(jsonData);
+            return jsonObject.optString("tag_name", "");
         } catch (JSONException e) {
-            Log.e(TAG, "Error parsing JSON", e);
-            return "";
+            throw new RuntimeException("Error processing JSON", e);
         }
     }
 
-    private void onPostExecute(String latestVersion) {
+    private void handleLatestVersion(String latestVersion) {
         Context context = contextRef.get();
-        if (context == null) {
-            return;
-        }
+        if (context == null) return;
 
         View rootView = getRootView(context);
         if (rootView == null) return;
 
-        if (latestVersion.equals(ERROR_NO_RESPONSE)) {
-            showApiErrorResponseSnackbar(rootView);
-            return;
-        }
-
         String appVersion = context.getString(R.string.github_tag_version);
 
         if (appVersion.compareTo(latestVersion) < 0) {
-            showUpdateSnackbar(rootView, context);
-            openGitHubReleaseLink(context);
+            showSnackbarWithAction(rootView, context.getString(R.string.update_available), context.getString(R.string.snackbar_button_download), v -> openGitHubReleaseLink(context));
         } else {
-            showUpToDateSnackbar(rootView);
+            showSnackbar(rootView, context.getString(R.string.no_update_available));
         }
     }
 
-    private void handleUpdateError(Exception e) {
+    private void handleError(Throwable throwable) {
         Context context = contextRef.get();
-        if (context != null) {
-            View rootView = getRootView(context);
-            if (rootView != null) {
-                if (e instanceof IOException) {
-                    showSnackbar(rootView, context.getString(R.string.error_connection) + e.getMessage());
-                } else {
-                    showSnackbar(rootView, context.getString(R.string.error_others) + e.getMessage());
-                }
+        if (context == null) return;
+
+        View rootView = getRootView(context);
+        if (rootView != null) {
+            String errorMessage;
+            if (throwable.getMessage() != null && throwable.getMessage().toLowerCase().contains("connection")) {
+                errorMessage = context.getString(R.string.error_connection) + " " + throwable.getMessage();
+            } else {
+                errorMessage = context.getString(R.string.error_others) + " " + throwable.getMessage();
             }
+            showSnackbar(rootView, errorMessage);
         }
-    }
-
-    private String handleRequestError(IOException e) {
-        Log.e(TAG, "Request error", e);
-        return ERROR_NO_RESPONSE;
-    }
-
-    private void showUpdateSnackbar(View rootView, Context context) {
-        String message = context.getString(R.string.update_available);
-        showSnackbar(rootView, message);
-    }
-
-    private void showUpToDateSnackbar(View rootView) {
-        String message = rootView.getContext().getString(R.string.no_update_available);
-        showSnackbar(rootView, message);
-    }
-
-    private void showApiErrorResponseSnackbar(View rootView) {
-        String message = rootView.getContext().getString(R.string.check_updates_error);
-        showSnackbar(rootView, message);
     }
 
     private void showSnackbar(View rootView, String message) {
         new Handler(Looper.getMainLooper()).post(() -> Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).show());
+    }
+
+    private void showSnackbarWithAction(View rootView, String message, String actionText, View.OnClickListener actionListener) {
+        new Handler(Looper.getMainLooper()).post(() -> {
+            Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).setAction(actionText, actionListener).show();
+        });
     }
 
     private void openGitHubReleaseLink(Context context) {

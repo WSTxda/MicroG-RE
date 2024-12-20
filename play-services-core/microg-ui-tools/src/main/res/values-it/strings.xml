@@ -49,6 +49,8 @@
     <string name="no_update_available">Hai l\'ultima versione</string>
     <string name="check_updates_error">Impossibile controllare gli aggiornamenti</string>
 
+    <string name="snackbar_button_download">Scarica</string>
+
     <string name="error_connection">Errore di connessione:</string>
     <string name="error_others">Errore:</string>
 </resources>

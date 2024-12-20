@@ -37,6 +37,8 @@
     <string name="no_update_available">Sua versão é a mais recente</string>
     <string name="check_updates_error">Erro ao tentar verificar</string>
 
+    <string name="snackbar_button_download">Baixar</string>
+
     <string name="error_connection">Erro de conexão:</string>
     <string name="error_others">Erro:</string>
 </resources>

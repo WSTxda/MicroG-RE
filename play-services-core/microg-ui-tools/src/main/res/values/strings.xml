@@ -44,7 +44,7 @@
 
     <!-- UpdateChecker tag controller-->
 
-    <string name="github_tag_version">5.9</string>
+    <string name="github_tag_version">5.8</string>
 
     <!-- Updater strings-->
 
@@ -52,6 +52,8 @@
     <string name="update_available">New version available!</string>
     <string name="no_update_available">You are on latest version</string>
     <string name="check_updates_error">Unable to check for updates</string>
+
+    <string name="snackbar_button_download">Download</string>
 
     <string name="error_connection">Connection error:</string>
     <string name="error_others">Error:</string>

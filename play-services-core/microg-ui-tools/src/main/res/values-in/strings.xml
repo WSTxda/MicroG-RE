@@ -49,6 +49,8 @@
     <string name="no_update_available">Anda sudah menggunakan versi terbaru</string>
     <string name="check_updates_error">Tidak dapat memeriksa pembaruan</string>
 
+    <string name="snackbar_button_download">Unduh</string>
+
     <string name="error_connection">Kesalahan koneksi:</string>
     <string name="error_others">Kesalahan:</string>
 </resources>
