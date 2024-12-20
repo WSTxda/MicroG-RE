@@ -53,6 +53,7 @@ Isso pode levar alguns minutos."</string>
     <string name="perm_extended_access_label">Acesso estendido aos serviços do Google</string>
 
     <string name="service_name_checkin">Registro de dispositivos</string>
+    <string name="service_name_mcs">Mensagens na nuvem</string>
 
     <string name="network_type_mobile">Dados móveis</string>
     <string name="network_type_wifi">Wi-Fi</string>
@@ -88,7 +89,7 @@ Isso pode levar alguns minutos."</string>
     <string name="prefcat_about">Sobre</string>
 
     <string name="cond_gcm_bat_title">Otimização de bateria ativada</string>
-    <string name="cond_gcm_bat_summary">Você ativou o Cloud Messaging, mas tem otimizações de bateria ativada para os Serviços MicroG. Para que as notificações push cheguem, você deve ignorar as otimizações da bateria</string>
+    <string name="cond_gcm_bat_summary">Você ativou as mensagens na nuvem, mas tem otimizações de bateria ativada para os Serviços MicroG. Para que as notificações push cheguem, você deve ignorar as otimizações da bateria</string>
     <string name="cond_gcm_bat_action">Ignorar otimizações</string>
     <string name="cond_perm_title">Permissão ausente</string>
 
@@ -111,7 +112,7 @@ Isso pode levar alguns minutos."</string>
 
     <string name="pref_account_title">Contas</string>
     <string name="pref_account_summary">Fazer login em uma conta Google</string>
-    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging é um provedor de notificação push usado por aplicativos modificados. Para utilizar você deve habilitar o registro de dispositivos</string>
+    <string name="pref_gcm_enable_mcs_summary">Mensagens na nuvem é um provedor de notificação push usado por aplicativos modificados. Para utilizar você deve habilitar o registro de dispositivos</string>
     <string name="pref_gcm_confirm_new_apps_title">Confirmar novos apps</string>
     <string name="pref_gcm_confirm_new_apps_summary">Perguntar antes de registrar um novo app para receber notificações push</string>
 
