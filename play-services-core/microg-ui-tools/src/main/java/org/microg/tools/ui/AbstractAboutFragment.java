@@ -144,12 +144,10 @@ public abstract class AbstractAboutFragment extends Fragment {
         btnCheckUpdates.setOnClickListener(v -> {
             btnCheckUpdates.setEnabled(false);
 
-            new Handler().postDelayed(() -> {
-                btnCheckUpdates.setEnabled(true);
-            }, 1000); // Button disabled timeout, do not increase the value much, leave it between 1~4 milliseconds
-
             UpdateChecker updateChecker = new UpdateChecker(getContext());
-            updateChecker.checkForUpdates();
+            updateChecker.checkForUpdates(() -> {
+                btnCheckUpdates.setEnabled(true);
+            });
         });
 
         return aboutRoot;

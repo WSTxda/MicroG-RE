@@ -34,9 +34,15 @@ public class UpdateChecker {
         this.client = new OkHttpClient.Builder().retryOnConnectionFailure(true).build();
     }
 
-    public void checkForUpdates() {
-        CompletableFuture.supplyAsync(this::fetchLatestVersion).thenAccept(this::handleLatestVersion).exceptionally(throwable -> {
-            handleError(throwable);
+    public void checkForUpdates(Runnable onComplete) {
+        CompletableFuture.supplyAsync(this::fetchLatestVersion).thenAccept(latestVersion -> runOnMainThread(() -> {
+            handleLatestVersion(latestVersion);
+            onComplete.run();
+        })).exceptionally(throwable -> {
+            runOnMainThread(() -> {
+                handleError(throwable);
+                onComplete.run();
+            });
             return null;
         });
     }
@@ -87,24 +93,18 @@ public class UpdateChecker {
 
         View rootView = getRootView(context);
         if (rootView != null) {
-            String errorMessage;
-            if (throwable.getMessage() != null && throwable.getMessage().toLowerCase().contains("connection")) {
-                errorMessage = context.getString(R.string.error_connection) + " " + throwable.getMessage();
-            } else {
-                errorMessage = context.getString(R.string.error_others) + " " + throwable.getMessage();
-            }
+            String errorMessage = throwable.getMessage() != null && throwable.getMessage().toLowerCase().contains("connection") ? context.getString(R.string.error_connection) + " " + throwable.getMessage() : context.getString(R.string.error_others) + " " + throwable.getMessage();
+
             showSnackbar(rootView, errorMessage);
         }
     }
 
     private void showSnackbar(View rootView, String message) {
-        new Handler(Looper.getMainLooper()).post(() -> Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).show());
+        Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).show();
     }
 
     private void showSnackbarWithAction(View rootView, String message, String actionText, View.OnClickListener actionListener) {
-        new Handler(Looper.getMainLooper()).post(() -> {
-            Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).setAction(actionText, actionListener).show();
-        });
+        Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).setAction(actionText, actionListener).show();
     }
 
     private void openGitHubReleaseLink(Context context) {
@@ -117,5 +117,9 @@ public class UpdateChecker {
             return ((android.app.Activity) context).findViewById(android.R.id.content);
         }
         return null;
+    }
+
+    private void runOnMainThread(Runnable action) {
+        new Handler(Looper.getMainLooper()).post(action);
     }
 }
