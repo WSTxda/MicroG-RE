@@ -34,8 +34,8 @@ public abstract class AbstractSettingsFragment extends PreferenceFragmentCompat 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
-        setReenterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
+        setReenterTransition(new MaterialSharedAxis(MaterialSharedAxis.X, false));
     }
 
     @Override
