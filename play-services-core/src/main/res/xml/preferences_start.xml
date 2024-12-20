@@ -36,15 +36,15 @@
         android:title="@string/service_name_checkin" />
 
     <Preference
+        android:icon="@drawable/ic_cloud_messaging"
+        android:key="pref_gcm"
+        android:title="@string/service_name_mcs" />
+
+    <Preference
         android:icon="@drawable/ic_privacy"
         android:key="pref_privacy"
         android:summary="@string/pref_privacy_summary"
         android:title="@string/pref_privacy_title" />
-
-    <Preference
-        android:icon="@drawable/ic_cloud_messaging"
-        android:key="pref_gcm"
-        android:title="@string/service_name_mcs" />
 
     <SwitchPreferenceCompat
         android:defaultValue="true"

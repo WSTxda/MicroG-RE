@@ -79,7 +79,7 @@
         <item name="colorBackgroundFloating">?colorSurfaceContainer</item>
     </style>
 
-    <style name="Component.AlertDialog.RemoveAccount" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="Component.AlertDialog.RemoveAccount" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered">
         <item name="android:colorBackground">?colorSurfaceContainer</item>
         <item name="android:listPreferredItemHeightSmall">48dp</item>
         <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
@@ -104,7 +104,9 @@
 
     <style name="TextAppearance.Preference.Category.Title" parent="@style/TextAppearance.Material3.LabelLarge" />
 
-    <style name="TextAppearance.PositiveButton.Warning" parent="Widget.Material3.Button.TextButton.Dialog">
+    <style name="TextAppearance.PositiveButton.Warning" parent="@style/Widget.Material3.Button.TextButton.Dialog.Icon">
+        <item name="icon">@drawable/ic_remove</item>
+        <item name="iconTint">?colorError</item>
         <item name="android:textColor">?colorError</item>
         <item name="rippleColor">?colorErrorContainer</item>
     </style>
