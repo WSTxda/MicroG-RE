@@ -24,7 +24,7 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableEdgeToEdgeNoContrast();
+//        enableEdgeToEdgeNoContrast();
         setContentView(R.layout.settings_activity);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -84,11 +84,11 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
         return fragment;
     }
 
-    private void enableEdgeToEdgeNoContrast() {
-        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
-        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            getWindow().setNavigationBarContrastEnforced(false);
-        }
-    }
+//    private void enableEdgeToEdgeNoContrast() {
+//        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
+//        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//            getWindow().setNavigationBarContrastEnforced(false);
+//        }
+//    }
 }

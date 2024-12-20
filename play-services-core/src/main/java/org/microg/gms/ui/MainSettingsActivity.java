@@ -32,7 +32,7 @@ public class MainSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableEdgeToEdgeNoContrast();
+//        enableEdgeToEdgeNoContrast();
 
         Intent intent = getIntent();
         for (SettingsProvider settingsProvider : getAllSettingsProviders(this)) {
@@ -58,11 +58,11 @@ public class MainSettingsActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(getNavController(), appBarConfiguration) || super.onSupportNavigateUp();
     }
 
-    private void enableEdgeToEdgeNoContrast() {
-        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
-        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            getWindow().setNavigationBarContrastEnforced(false);
-        }
-    }
+//    private void enableEdgeToEdgeNoContrast() {
+//        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
+//        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//            getWindow().setNavigationBarContrastEnforced(false);
+//        }
+//    }
 }

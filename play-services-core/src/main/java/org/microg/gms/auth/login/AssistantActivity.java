@@ -38,7 +38,7 @@ public abstract class AssistantActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableEdgeToEdgeNoContrast();
+//        enableEdgeToEdgeNoContrast();
         setContentView(R.layout.login_assistant);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -94,11 +94,11 @@ public abstract class AssistantActivity extends AppCompatActivity {
         return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
     }
 
-    private void enableEdgeToEdgeNoContrast() {
-        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
-        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            getWindow().setNavigationBarContrastEnforced(false);
-        }
-    }
+//    private void enableEdgeToEdgeNoContrast() {
+//        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
+//        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//            getWindow().setNavigationBarContrastEnforced(false);
+//        }
+//    }
 }
