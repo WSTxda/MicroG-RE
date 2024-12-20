@@ -28,7 +28,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -115,19 +115,30 @@ public abstract class AbstractAboutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View aboutRoot = inflater.inflate(R.layout.about_root, container, false);
+
         ((ImageView) aboutRoot.findViewById(android.R.id.icon)).setImageDrawable(getIcon(getContext()));
         ((TextView) aboutRoot.findViewById(android.R.id.title)).setText(getAppName());
         ((TextView) aboutRoot.findViewById(R.id.about_version)).setText(getString(R.string.about_version_str, getSelfVersion()));
+
         String summary = getSummary();
         if (summary != null) {
             ((TextView) aboutRoot.findViewById(android.R.id.summary)).setText(summary);
             aboutRoot.findViewById(android.R.id.summary).setVisibility(View.VISIBLE);
         }
 
-        List<Library> libraries = new ArrayList<Library>();
+        List<Library> libraries = new ArrayList<>();
         collectLibraries(libraries);
         Collections.sort(libraries);
-        ((ListView) aboutRoot.findViewById(android.R.id.list)).setAdapter(new LibraryAdapter(getContext(), libraries.toArray(new Library[libraries.size()])));
+
+        LinearLayout libraryContainer = aboutRoot.findViewById(R.id.library_container);
+        for (Library library : libraries) {
+            View libraryView = inflater.inflate(R.layout.library_item, libraryContainer, false);
+            ((TextView) libraryView.findViewById(android.R.id.text1))
+                    .setText(getString(R.string.about_name_version_str, library.name, getLibVersion(library.packageName)));
+            ((TextView) libraryView.findViewById(android.R.id.text2))
+                    .setText(library.copyright != null ? library.copyright : getString(R.string.about_default_license));
+            libraryContainer.addView(libraryView);
+        }
 
         Button btnCheckUpdates = aboutRoot.findViewById(R.id.btnCheckUpdates);
         btnCheckUpdates.setOnClickListener(v -> {

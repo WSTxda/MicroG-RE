@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:maxLines="2"
-            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
             android:textColor="?android:textColorPrimary" />
 
         <TextView

@@ -1,8 +1,13 @@
 package org.microg.gms.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.activity.ComponentActivity;
+import androidx.activity.EdgeToEdge;
+import androidx.activity.SystemBarStyle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +32,7 @@ public class MainSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        enableEdgeToEdgeNoContrast();
 
         Intent intent = getIntent();
         for (SettingsProvider settingsProvider : getAllSettingsProviders(this)) {
@@ -50,5 +56,13 @@ public class MainSettingsActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         return NavigationUI.navigateUp(getNavController(), appBarConfiguration) || super.onSupportNavigateUp();
+    }
+
+    private void enableEdgeToEdgeNoContrast() {
+        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
+        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            getWindow().setNavigationBarContrastEnforced(false);
+        }
     }
 }

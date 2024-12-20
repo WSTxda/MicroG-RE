@@ -51,6 +51,7 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="48dp"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_settings" />
     </androidx.core.widget.NestedScrollView>

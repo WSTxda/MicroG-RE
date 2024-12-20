@@ -1,9 +1,14 @@
 package org.microg.tools.ui;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 
+import androidx.activity.ComponentActivity;
+import androidx.activity.EdgeToEdge;
+import androidx.activity.SystemBarStyle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -19,6 +24,7 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        enableEdgeToEdgeNoContrast();
         setContentView(R.layout.settings_activity);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -76,5 +82,13 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
         b.putInt(ResourceSettingsFragment.EXTRA_PREFERENCE_RESOURCE, preferencesResource);
         fragment.setArguments(b);
         return fragment;
+    }
+
+    private void enableEdgeToEdgeNoContrast() {
+        SystemBarStyle systemBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT);
+        EdgeToEdge.enable((ComponentActivity) this, systemBarStyle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            getWindow().setNavigationBarContrastEnforced(false);
+        }
     }
 }
