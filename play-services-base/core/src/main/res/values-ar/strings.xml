@@ -8,6 +8,8 @@
     <string name="foreground_service_notification_title">نشط في الخلفية</string>
     <string name="foreground_service_notification_text"><xliff:g example="Exposure Notification">%1$s</xliff:g> يعمل في الخلفية</string>
     <string name="foreground_service_notification_big_text">استبعد <xliff:g example="خدمات microG">%1$s</xliff:g> من تحسينات البطارية أو قم بتغيير إعدادات الإشعارات لإخفاء هذا الإشعار</string>
+    <string name="foreground_action_battery_optimization">تحسين البطارية</string>
+    <string name="foreground_action_notification_settings">الإعدادات</string>
 
     <string name="menu_settings">الإعدادات</string>
 
