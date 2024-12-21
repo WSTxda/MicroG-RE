@@ -90,6 +90,7 @@
 
     <style name="Component.Snackbar" parent="Widget.Material3.Snackbar">
         <item name="android:layout_margin">24dp</item>
+        <item name="animationMode">slide</item>
     </style>
 
     <style name="Settings.CategoryPreference" parent="@style/Preference.Category.Material">

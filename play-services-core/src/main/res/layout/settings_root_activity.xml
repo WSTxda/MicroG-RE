@@ -13,8 +13,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        app:liftOnScrollColor="?colorSurface">
+        android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -25,9 +24,7 @@
             app:expandedTitleMarginEnd="@dimen/settings_expanded_title_margin_end"
             app:expandedTitleMarginStart="@dimen/settings_expanded_title_margin_start"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:maxLines="2"
-            app:scrimVisibleHeightTrigger="@dimen/settings_scrim_visible_height_trigger"
-            app:titleCollapseMode="scale">
+            app:maxLines="2">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
