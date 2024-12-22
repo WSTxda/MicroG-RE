@@ -85,6 +85,7 @@
 
     <application
         android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
         android:forceQueryable="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
@@ -94,7 +95,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="r">
+        tools:targetApi="tiramisu">
 
         <library android:name="${basePackageName}.android.gms" />
 
