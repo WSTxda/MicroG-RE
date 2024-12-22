@@ -19,7 +19,7 @@
     <string name="lib_name">Alat UI MicroG</string>
     <string name="lib_license">Lisensi Apache 2.0, Tim microG</string>
 
-    <string name="about_version_str">Versi %1$s</string>
+    <string name="about_version_str">Versi: %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">Semua hak dilindungi undang-undang</string>
 

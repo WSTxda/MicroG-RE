@@ -19,7 +19,7 @@
     <string name="lib_name">MicroG UI Tools</string>
     <string name="lib_license">Apache License 2.0, microG Team</string>
 
-    <string name="about_version_str">Version %1$s</string>
+    <string name="about_version_str">Version: %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
     <string name="about_default_license">All rights reserved</string>
 
@@ -44,7 +44,7 @@
 
     <!-- UpdateChecker tag controller-->
 
-    <string name="github_tag_version">5.8</string>
+    <string name="github_tag_version">5.10</string>
 
     <!-- Updater strings-->
 
