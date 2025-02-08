@@ -4,7 +4,6 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="gms_app_name">MicroG</string>
     <string name="gms_settings_name">MicroG Ayarları</string>
     <string name="gms_settings_summary">MicroG hizmetlerini yapılandır</string>
 
@@ -88,11 +87,6 @@ Bu işlem birkaç dakika sürebilir."</string>
 
     <string name="self_check_name_battery_optimizations">Pil optimizasyonları yok sayıldı</string>
     <string name="self_check_resolution_battery_optimizations">Pil optimizasyonlarını devre dışı bırakmak için buraya dokunun. Bunu yapmazsanız YouTube ve diğer kayıtlı uygulamalardan bildirim almada sorun yaşayabilirsiniz</string>
-
-    <string name="self_check_pkg_revanced">ReVanced</string>
-    <string name="self_check_pkg_revanced_extended">ReVanced Extended</string>
-    <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
-    <string name="self_check_pkg_vanced">Vanced</string>
 
     <string name="self_check_revanced_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ile çalışıyor</string>
     <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> uygulamaları bulunamadı, değiştirilmiş bir APK derleyin veya yükleyin</string>
@@ -223,11 +217,8 @@ Bu işlem birkaç dakika sürebilir."</string>
 
     <!-- Settings options strings-->
 
-    <string name="wstxda">WSTxda</string>
     <string name="developer">Geliştirici</string>
-    <string name="developer_link">https://github.com/WSTxda</string>
     <string name="github">GitHub</string>
     <string name="github_source">Kaynak kod deposu</string>
-    <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
     <string name="pref_hide_launcher_icon">Başlatıcıda simgeyi gizle</string>
 </resources>
