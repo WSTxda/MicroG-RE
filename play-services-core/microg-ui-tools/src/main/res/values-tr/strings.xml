@@ -42,10 +42,6 @@
     <string name="about_android_support_v7_preference">v7 tercih Destek Kütüphanesi</string>
     <string name="about_android_support_license">Apache Lisansı 2.0, Android Açık Kaynak Projesi</string>
 
-    <!-- UpdateChecker tag controller-->
-
-    <string name="github_tag_version">5.10</string>
-
     <!-- Updater strings-->
 
     <string name="check_updates">Güncellemeleri kontrol et</string>
