@@ -66,104 +66,104 @@ Việc này có thể tốn thời gian"</string>
     <string name="self_check_cat_system">Hệ thống</string>
 
     <string name="self_check_name_fake_sig_perm">Thiết bị của bạn có hộ trợ giả mạo hệ thống</string>
-    <string name="self_check_resolution_fake_sig_perm">Your ROM has no native support for signature spoofing. You can still use Xposed or other systems to spoof signature. Please check the documentation on which ROMs do support signature spoofing and how to use MicroG on ROMs that do not</string>
-    <string name="self_check_name_perm_granted">System grants signature spoofing permission</string>
-    <string name="self_check_resolution_perm_granted">This is a strong indicator that the ROM does support signature spoofing, but requires further action to activate it. Please check the documentation on which steps might be required</string>
-    <string name="self_check_name_system_spoofs">System spoofs signature</string>
-    <string name="self_check_resolution_system_spoofs">Please check the documentation on which steps might be required</string>
+    <string name="self_check_resolution_fake_sig_perm">bản ROM của bạn không hỗ trợ giả mạo hệ thống cho MicroG, bạn có thể sử dụng Lsposed module (Eg. fakegapps), vui lòng xem tài liệu về những bản ROM được hỗ trợ </string>
+    <string name="self_check_name_perm_granted">Hệ thống đã cấp quyền giả mạo cho MicroG</string>
+    <string name="self_check_resolution_perm_granted">Bản ROM của bạn có hỗ trợ giả mạo cho MicroG, nhưng yêu cầu thực hiện một vài thao tác để kích hoạt, vui lòng đọc hdsd nếu có</string>
+    <string name="self_check_name_system_spoofs">Gỉa mạo chữ kí hệ thống</string>
+    <string name="self_check_resolution_system_spoofs">Vui lòng đọc tài liệu để kích hoạt</string>
 
-    <string name="self_check_pkg_gms">Play Services</string>
-    <string name="self_check_pkg_vending">Play Store</string>
-    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> installed</string>
-    <string name="self_check_resolution_app_installed">Install the application <xliff:g example="F-Droid">%1$s</xliff:g> or a compatible one. Please check the documentation on which applications are compatible</string>
-    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> correct signature</string>
-    <string name="self_check_resolution_correct_sig">Either the installed <xliff:g example="F-Droid">%1$s</xliff:g> is not compatible or signature spoofing is not active for it. Please check the documentation on which applications and ROMs are compatible</string>
+    <string name="self_check_pkg_gms">Dịch vụ Google</string>
+    <string name="self_check_pkg_vending">Cửa hàng Google</string>
+    <string name="self_check_name_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> đã cài đặt</string>
+    <string name="self_check_resolution_app_installed">Cài đặt ứng dụng <xliff:g example="F-Droid">%1$s</xliff:g> hoặc là một cái khác tương thích, đọc hdsd để biết ứng dụng nào tương thích</string>
+    <string name="self_check_name_correct_sig"><xliff:g example="F-Droid">%1$s</xliff:g> đúng chữ kí</string>
+    <string name="self_check_resolution_correct_sig">Mặc dù đã đucợ cài đặt <xliff:g example="F-Droid">%1$s</xliff:g> nhưng nó không được tương thích, vui lòng đọc hdsd để biết thêm thông tin</string>
 
-    <string name="self_check_name_battery_optimizations">Battery optimizations ignored</string>
-    <string name="self_check_resolution_battery_optimizations">Touch here to disable battery optimizations. Not doing so may result in issues receiving notifications from YouTube and other registered apps</string>
+    <string name="self_check_name_battery_optimizations">Vô hiệu hoá tối ưu pin cho ứng dụng</string>
+    <string name="self_check_resolution_battery_optimizations">Bấm vào đây để bật khả năng chạy ngầm liên tục cho ứng dụng để tránh lỗi (Một vài OEM sẽ yêu cầu bật tự động chạy, vui lòng tự tìm hiểu)</string>
 
     <string name="self_check_pkg_revanced">ReVanced</string>
     <string name="self_check_pkg_revanced_extended">ReVanced Extended</string>
     <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
     <string name="self_check_pkg_vanced">Vanced</string>
-    <string name="self_check_revanced_name_app_installed">Running with <xliff:g example="F-Droid">%1$s</xliff:g></string>
-    <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> apps not found, compile or install a modified apk</string>
+    <string name="self_check_revanced_name_app_installed">Đang chạy với <xliff:g example="F-Droid">%1$s</xliff:g></string>
+    <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> ứng dụng không tìm thấy hoặc đã bị chỉnh sửa</string>
 
     <!-- Settings strings -->
 
-    <string name="prefcat_about">About</string>
+    <string name="prefcat_about">Thông tin</string>
 
-    <string name="cond_gcm_bat_title">Battery optimizations enabled</string>
-    <string name="cond_gcm_bat_summary">You enabled Cloud Messaging but have battery optimizations active for MicroG Services. For push notifications to arrive you should ignore battery optimizations</string>
-    <string name="cond_gcm_bat_action">Ignore optimizations</string>
-    <string name="cond_perm_title">Permission missing</string>
+    <string name="cond_gcm_bat_title">Tối ưu pin đã được kích hoạt</string>
+    <string name="cond_gcm_bat_summary">Bạn đã bật thông báo đám mây nhưng chưa cho khả năng chạy ngậm, vui lòng cho chạy ngầm liên tục để thông báo ổn định</string>
+    <string name="cond_gcm_bat_action">Cho chạy ngầm</string>
+    <string name="cond_perm_title">Thiếu quyền</string>
 
-    <string name="pref_auth_trust_google_title">Trust Google for app permissions</string>
-    <string name="pref_auth_trust_google_summary">When disabled, the user is asked before an apps authorization request is sent to Google. Some applications will fail to use the Google account if this is disabled</string>
-    <string name="pref_auth_visible_title">Allow apps to find accounts</string>
-    <string name="pref_auth_visible_summary">When enabled, all applications on this device will be able to see email address of your Google Accounts without prior authorization</string>
+    <string name="pref_auth_trust_google_title">Tin tưởng cấp quyền cho những ứng dụng của Google</string>
+    <string name="pref_auth_trust_google_summary">Khi tắt, người dùng sẽ được hỏi có chia sẻ thông tin tài khoản cho những ứng dụng của Google hay không, việc tắt sẽ gây ra một vài lỗi</string>
+    <string name="pref_auth_visible_title">Cho phép các ứng dụng tìm tài khoản trong MicroG</string>
+    <string name="pref_auth_visible_summary">Khi kích hoạt, mọi ứng dụng có thể xem thông tin tài khoản của bạn đã liên kết với MicroG</string>
     <string name="brand_spoof_button">Huawei</string>
-    <string name="pref_auth_include_android_id_title">Authenticate with device registration</string>
-    <string name="pref_auth_include_android_id_summary">When disabled, authentication requests won\'t be linked to the device registration, which allows unauthorized devices to sign in, but may have unforeseen consequences</string>
-    <string name="pref_auth_strip_device_name_title">Strip device name for authentication</string>
-    <string name="pref_auth_strip_device_name_summary">When enabled, authentication requests won\'t include the device\'s name, which may allow unauthorized devices to sign in, but may have unforeseen consequences</string>
+    <string name="pref_auth_include_android_id_title">Xác thực bằng thông tin của thiết bị</string>
+    <string name="pref_auth_include_android_id_summary">Khi tắt, thông tin xác minh sẽ không bao gồm thông tin thiết bị của bạn, bạn có thể gặp một vài sự cố</string>
+    <string name="pref_auth_strip_device_name_title">Không gửi tên thiết bị khi xác thực</string>
+    <string name="pref_auth_strip_device_name_summary">Khi kích hoạt, tên thiết bị của bạn sẽ không được gửi để xác minh, việc bật lên sẽ gây ra một vài lỗi</string>
 
-    <string name="pref_checkin_enable_summary">Registers your device to Google services and creates a unique device identifier. MicroG strips identifying bits other than your Google account name from registration data</string>
+    <string name="pref_checkin_enable_summary">Liên kết thiết bị của bạn với dịch vụ Google và tạo 1 mã định danh duy nhất, MicroG sẽ giúp bạn xoá một vài dữ liệu dư thừa</string>
     <string name="pref_device_registration_android_id">Android ID</string>
 
-    <string name="checkin_not_registered">Not registered</string>
-    <string name="checkin_last_registration">Last registration: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="checkin_enable_switch">Register device</string>
+    <string name="checkin_not_registered">Chưa liên kết</string>
+    <string name="checkin_last_registration">Lần liên kết cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="checkin_enable_switch">Thiết bị đã liên kết</string>
 
-    <string name="pref_info_status">Status</string>
+    <string name="pref_info_status">Trạng thái</string>
 
-    <string name="pref_account_title">Accounts</string>
-    <string name="pref_account_summary">Login in new Google account</string>
-    <string name="pref_gcm_enable_mcs_summary">Cloud Messaging is a push notification provider used for modified apps. To use it you must enable device registration</string>
-    <string name="pref_gcm_confirm_new_apps_title">Confirm new apps</string>
-    <string name="pref_gcm_confirm_new_apps_summary">Ask before registering a new app to receive push notifications</string>
+    <string name="pref_account_title">Tài khoản</string>
+    <string name="pref_account_summary">Đăng nhập tài khoản Google mới</string>
+    <string name="pref_gcm_enable_mcs_summary">Thông báo đám mấy (FCM) là dịch vụ gửi/nhận thông báo cho các ứng dụng đã chỉnh sửa mà cần FCM, để sử dụng bạn cần bật đăng kí thiết bị</string>
+    <string name="pref_gcm_confirm_new_apps_title">Xác nhận ứng dụng mới</string>
+    <string name="pref_gcm_confirm_new_apps_summary">Hỏi trước khi cho phép ưng dụng nhận/gửi thông báo</string>
 
-    <string name="pref_about_title">About MicroG</string>
+    <string name="pref_about_title">Về MicroG</string>
 
-    <string name="gcm_unregister_app">Unregister</string>
-    <string name="gcm_no_message_yet">No messages received so far</string>
-    <string name="gcm_last_message_at">Last message: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_registered">Registered</string>
-    <string name="gcm_registered_since">Registered since: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
-    <string name="gcm_unregister_confirm_title">Unregister <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
-    <string name="gcm_unregister_confirm_message">Some apps do not automatically re-register and/or do not provide an option to do so manually. These apps might not work correctly after unregistering.\nContinue?</string>
-    <string name="gcm_unregister_after_deny_message">You denied an app to register for push notifications that is already registered.\nDo you want to unregister it now so it does not receive push messages in the future?</string>
-    <string name="gcm_messages_counter">Messages: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
-    <string name="gcm_network_state_disconnected">Disconnected</string>
-    <string name="gcm_network_state_connected">Connected since <xliff:g example="2 hours ago">%1$s</xliff:g></string>
-    <string name="gcm_enable_switch">Push notifications</string>
-    <string name="gcm_allow_app_popup">Allow <xliff:g example="F-Droid">%1$s</xliff:g> to register for push notifications?</string>
+    <string name="gcm_unregister_app">Chưa đăng kí</string>
+    <string name="gcm_no_message_yet">Không có thông báo nhận gần đây</string>
+    <string name="gcm_last_message_at">Thông báo lần cuối: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_registered">Đã đăng kí</string>
+    <string name="gcm_registered_since">Đăng kí từ: <xliff:g example="Yesterday, 02:20 PM">%1$s</xliff:g></string>
+    <string name="gcm_unregister_confirm_title">Chưa đăng kí <xliff:g example="F-Droid">%1$s</xliff:g>?</string>
+    <string name="gcm_unregister_confirm_message">Một vài ứng dụng không tự đăng kí lại hoặc ko có tuỳ chọn để làm thủ công, ứng dụng có thể hoạt động không đúng cách sau khi huỷ đăng kí.\nTiếp tục?</string>
+    <string name="gcm_unregister_after_deny_message">Bạn đã từ chối đăng kí ứng dụng đã được đăng kí để nhận/gửi thông báo. \nBạn có muốn huỷ đăng kí để không còn nhận thông báo trong tương lai không?</string>
+    <string name="gcm_messages_counter">Số lượng thông báo: <xliff:g example="123">%1$d</xliff:g> (<xliff:g example="12345">%2$d</xliff:g> bytes)</string>
+    <string name="gcm_network_state_disconnected">Đã ngắt kết nối</string>
+    <string name="gcm_network_state_connected">Đã kết nối vào <xliff:g example="2 hours ago">%1$s</xliff:g></string>
+    <string name="gcm_enable_switch">Nhận thông báo (FCM)</string>
+    <string name="gcm_allow_app_popup">Cho phép <xliff:g example="F-Droid">%1$s</xliff:g> để nhận thông báo?</string>
 
-    <string name="pref_push_app_allow_register_title">Allow registration</string>
-    <string name="pref_push_app_allow_register_summary">Allow the app to register for push notifications</string>
-    <string name="pref_push_app_wake_for_delivery_title">Start app on push message</string>
-    <string name="pref_push_app_wake_for_delivery_summary">Start the app while in background to receive the incoming push messages</string>
-    <string name="prefcat_push_apps_title">Apps using push notifications</string>
-    <string name="prefcat_push_apps_registered_title">Registered apps</string>
-    <string name="prefcat_push_apps_unregistered_title">Unregistered apps</string>
-    <string name="prefcat_push_networks_title">Networks to use for push notifications</string>
+    <string name="pref_push_app_allow_register_title">Cho phép đăng kí</string>
+    <string name="pref_push_app_allow_register_summary">Cho phép ứng dụng sử dụng dịch vụ nhận thông báo qua FCM</string>
+    <string name="pref_push_app_wake_for_delivery_title">Khởi động ứng dụng khi nhận được thông báo</string>
+    <string name="pref_push_app_wake_for_delivery_summary">Khởi động ứng dụng trong nền để nhận những thông báo tiếp theo</string>
+    <string name="prefcat_push_apps_title">Ứng dụng sử dụng dịch vụ gửi/nhận thông báo</string>
+    <string name="prefcat_push_apps_registered_title">Những ứng dụng đã đăng kí/string>
+    <string name="prefcat_push_apps_unregistered_title">Những ứng dụng chưa đăng kí</string>
+    <string name="prefcat_push_networks_title">Các giao thức kết nối để nhận thông báo</string>
 
-    <string name="profile_name_native">Native</string>
-    <string name="profile_name_real">Real</string>
-    <string name="profile_name_user">Custom: %s</string>
-    <string name="profile_name_auto">Automatic: %s</string>
-    <string name="profile_name_system">System: %s</string>
-    <string name="pref_device_registration_import_custom_profile_title">Import custom profile</string>
+    <string name="profile_name_native">Trực tiếp</string>
+    <string name="profile_name_real">Thực</string>
+    <string name="profile_name_user">Tuỳ chỉnh: %s</string>
+    <string name="profile_name_auto">Tự động: %s</string>
+    <string name="profile_name_system">Hệ thống: %s</string>
+    <string name="pref_device_registration_import_custom_profile_title">Nhập profile tuỳ chỉnh</string>
     <string name="pref_device_registration_serial_title">Serial</string>
-    <string name="pref_device_registration_import_custom_profile_summary">Import device profile from file</string>
-    <string name="pref_device_registration_select_profile_title">Select profile</string>
-    <string name="pref_device_registration_device_profile_category">Device profile</string>
+    <string name="pref_device_registration_import_custom_profile_summary">Nhập thông tin thiết bị từ file</string>
+    <string name="pref_device_registration_select_profile_title">Chọn profile thiết bị</string>
+    <string name="pref_device_registration_device_profile_category">Thông tin thiết bị</string>
 
-    <string name="push_notifications_summary_off">OFF</string>
-    <string name="push_notifications_summary_automatic">ON / Automatic: %s</string>
-    <string name="push_notifications_summary_manual">ON / Manual: %s</string>
-    <string name="push_notifications_summary_values_seconds">%s seconds</string>
-    <string name="push_notifications_summary_values_minutes">%s minutes</string>
+    <string name="push_notifications_summary_off">Tắt</string>
+    <string name="push_notifications_summary_automatic">Bật / tự động: %s</string>
+    <string name="push_notifications_summary_manual">Bật / thủ công: %s</string>
+    <string name="push_notifications_summary_values_seconds">%s giây</string>
+    <string name="push_notifications_summary_values_minutes">%s phút</string>
 
     <string name="pref_network_google_enabled_summary">If disabled, all connections to Google servers usually done by MicroG will be denied. This overrides service specific settings</string>
     <string name="pref_network_google_enabled">Allow connecting to Google servers</string>
