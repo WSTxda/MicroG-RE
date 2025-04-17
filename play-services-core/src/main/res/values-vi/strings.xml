@@ -165,40 +165,40 @@ Việc này có thể tốn thời gian"</string>
     <string name="push_notifications_summary_values_seconds">%s giây</string>
     <string name="push_notifications_summary_values_minutes">%s phút</string>
 
-    <string name="pref_network_google_enabled_summary">If disabled, all connections to Google servers usually done by MicroG will be denied. This overrides service specific settings</string>
-    <string name="pref_network_google_enabled">Allow connecting to Google servers</string>
-    <string name="pref_network_google_use_tor">Connect to Google via Tor network</string>
-    <string name="pref_network_google_use_tor_summary">Requires Orbot to be installed\\nNot yet supported</string>
+    <string name="pref_network_google_enabled_summary">Nếu bị vô hiệu hoá, mọi luồng kết nối tới máy chủ của Google sẽ bị ngắt</string>
+    <string name="pref_network_google_enabled">Kết nối tới máy chủ của Google</string>
+    <string name="pref_network_google_use_tor">Kết nối máy chủ Google qua mạng lưới Tor</string>
+    <string name="pref_network_google_use_tor_summary">Yêu cầu ứng dụng Orbot \\nChưa được cài đặt</string>
 
     <!-- Account settings-->
 
-    <string name="pref_accounts_summary">Add and manage Google accounts</string>
-    <string name="prefcat_accounts_options_title">Options</string>
-    <string name="prefcat_accounts_login_accounts_title">Logged in</string>
-    <string name="pref_accounts_add_account_title">Add account</string>
-    <string name="pref_accounts_manage_accounts_title">Manage accounts</string>
-    <string name="pref_accounts_manage_accounts_summary">Open device accounts manager</string>
+    <string name="pref_accounts_summary">Thêm và quản lý tài khoản Google của bạn</string>
+    <string name="prefcat_accounts_options_title">Tuỳ chọn</string>
+    <string name="prefcat_accounts_login_accounts_title">Đã đăng nhập</string>
+    <string name="pref_accounts_add_account_title">Thêm tài khoản</string>
+    <string name="pref_accounts_manage_accounts_title">Quản lý tài khoản</string>
+    <string name="pref_accounts_manage_accounts_summary">Mở trình quản lý tài khoản của hệ thống</string>
     <!-- YouTube activity-->
-    <string name="prefcat_youtube_activity">YouTube Activity</string>
-    <string name="pref_manage_all_history">Manage all history</string>
-    <string name="pref_data_in_youtube">Your data in YouTube</string>
+    <string name="prefcat_youtube_activity">Hoạt động trên Youtube</string>
+    <string name="pref_manage_all_history">Quản lý lịch sử</string>
+    <string name="pref_data_in_youtube">Dữ liệu của bạn với Youtube</string>
 
     <!-- Account remove dialog-->
 
-    <string name="dialog_title_remove_account">Remove account</string>
-    <string name="dialog_message_remove_account">Are you sure you want to remove this account?\n\nSome services and functions will be unavailable\n\nYour data will not be lost</string>
-    <string name="dialog_confirm_button">Remove</string>
-    <string name="dialog_cancel_button">Cancel</string>
-    <string name="snackbar_remove_account">Account %s removed</string>
-    <string name="snackbar_undo_button">Undo</string>
+    <string name="dialog_title_remove_account">Huỷ liên kết tài khoản</string>
+    <string name="dialog_message_remove_account">Bạn có muốn huỷ liên kết tài khoản này không?\n\nMột vài tính năng và dịch vụ sẽ không khả dụng sau đó\n\nDữ liệu của bạn sẽ không thay đổi</string>
+    <string name="dialog_confirm_button">Huỷ liên kết</string>
+    <string name="dialog_cancel_button">Suy nghĩ...</string>
+    <string name="snackbar_remove_account">Tài khoản %s đã huỷ liên kết</string>
+    <string name="snackbar_undo_button">Quay lại</string>
 
     <!-- Settings options strings-->
 
     <string name="wstxda">WSTxda</string>
-    <string name="developer">Developer</string>
+    <string name="developer">Nhà phát triển</string>
     <string name="developer_link">https://github.com/WSTxda</string>
     <string name="github">GitHub</string>
-    <string name="github_source">Source code repository</string>
+    <string name="github_source">Nơi lưu trữ mã nguồn</string>
     <string name="github_link">https://github.com/WSTxda/MicroG-RE</string>
-    <string name="pref_hide_launcher_icon">Hide icon in launcher</string>
+    <string name="pref_hide_launcher_icon">Ẩn ứng dụng</string>
 </resources>
