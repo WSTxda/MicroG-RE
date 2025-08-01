@@ -21,7 +21,7 @@
 
     <string name="about_version_str">Версія: %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
-    <string name="about_default_license">Всі права захищені</string>
+    <string name="about_default_license">Усі права захищені</string>
 
     <string name="prefcat_setup">Налаштування</string>
 
@@ -40,7 +40,7 @@
     <string name="about_android_support_v4">Бібліотека підтримки v4</string>
     <string name="about_android_support_v7_appcompat">Бібліотека підтримки v7 appcompat</string>
     <string name="about_android_support_v7_preference">Бібліотека підтримки v7 preference</string>
-    <string name="about_android_support_license">Ліцензія Apache 2.0, проект Android з відкритим кодом</string>
+    <string name="about_android_support_license">Ліцензія Apache 2.0, проєкт Android з відкритим кодом</string>
 
     <!-- UpdateChecker tag controller-->
 
