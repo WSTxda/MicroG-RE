@@ -13,8 +13,8 @@
 
     <string name="menu_settings">Налаштування</string>
 
-    <string name="list_no_item_none">Жодний</string>
-    <string name="list_item_see_all">Дивитися все</string>
+    <string name="list_no_item_none">Немає</string>
+    <string name="list_item_see_all">Показати все</string>
 
     <string name="open_app">Відкрити</string>
 
