@@ -21,7 +21,7 @@
 
     <string name="about_version_str">Версія: %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
-    <string name="about_default_license">Всі права захищено</string>
+    <string name="about_default_license">Всі права захищені</string>
 
     <string name="prefcat_setup">Налаштування</string>
 
