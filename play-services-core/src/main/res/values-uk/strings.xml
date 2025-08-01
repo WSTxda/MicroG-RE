@@ -90,7 +90,7 @@
     <string name="self_check_pkg_youtube_advanced">YT Advanced</string>
     <string name="self_check_pkg_vanced">Vanced</string>
     <string name="self_check_revanced_name_app_installed">Використовується <xliff:g example="F-Droid">%1$s</xliff:g></string>
-    <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> додатків не знайдено, скомпілюйте або встановиіть модифікований apk</string>
+    <string name="self_check_revanced_resolution_app_installed"><xliff:g example="F-Droid">%1$s</xliff:g> додатків не знайдено, скомпілюйте або встановіть модифікований apk</string>
 
     <!-- Settings strings -->
 
