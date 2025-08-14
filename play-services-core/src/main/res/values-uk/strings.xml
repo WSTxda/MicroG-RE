@@ -107,9 +107,9 @@
     <string name="pref_auth_visible_summary">Якщо ввімкнено, усі додатки на цьому пристрої зможуть бачити адресу електронної пошти ваших облікових записів Google без попереднього дозволу.</string>
     <string name="brand_spoof_button">Huawei</string>
     <string name="pref_auth_include_android_id_title">Автентифікація через реєстрацію пристрою</string>
-    <string name="pref_auth_include_android_id_summary">Якщо вимкнено, запити на автентифікацію не прив’язуватимуться до реєстрації пристрою, що дозволяє неавторизованим пристроям входити, але може мати непередбачувані наслідки.</string>
+    <string name="pref_auth_include_android_id_summary">Якщо вимкнено, запити на автентифікацію не прив’язуватимуться до реєстрації пристрою, що дозволяє неавторизованим пристроям входити, але це може мати непередбачувані наслідки.</string>
     <string name="pref_auth_strip_device_name_title">Не передавати назву пристрою під час автентифікації</string>
-    <string name="pref_auth_strip_device_name_summary">Якщо ввімкнено, запити на автентифікацію не міститимуть назви пристрою, що може дозволити неавторизованим пристроям входити, але може мати непередбачувані наслідки.</string>
+    <string name="pref_auth_strip_device_name_summary">Якщо ввімкнено, запити на автентифікацію не міститимуть назви пристрою, що може дозволити неавторизованим пристроям входити, але це може мати непередбачувані наслідки.</string>
 
     <string name="pref_checkin_enable_summary">Реєструє ваш пристрій у сервісах Google та створює унікальний ідентифікатор пристрою. MicroG видаляє всі ідентифікаційні дані, крім імені вашого облікового запису Google, з даних реєстрації</string>
     <string name="pref_device_registration_android_id">Android ID</string>
