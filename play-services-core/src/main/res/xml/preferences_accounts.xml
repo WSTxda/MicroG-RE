@@ -52,4 +52,8 @@
         android:layout="@layout/preference_material_information"
         android:selectable="false"
         android:title="@string/pref_accounts_login_accounts_summary" />
+
+    <Preference
+        android:layout="@layout/preference_material_scroll_margin"
+        android:selectable="false" />
 </PreferenceScreen>

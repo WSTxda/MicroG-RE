@@ -93,6 +93,14 @@ public class MainSettingsActivity extends AppCompatActivity {
 
         appBarConfiguration = new AppBarConfiguration.Builder(getNavController().getGraph()).build();
         NavigationUI.setupWithNavController(toolbarLayout, toolbar, getNavController(), appBarConfiguration);
+
+        nestedScrollView.setOnScrollChangeListener((NestedScrollView.OnScrollChangeListener) (v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
+            if (scrollY > oldScrollY) {
+                fab.shrink();
+            } else {
+                fab.extend();
+            }
+        });
     }
 
     private void enableEdgeToEdgeNoContrast() {

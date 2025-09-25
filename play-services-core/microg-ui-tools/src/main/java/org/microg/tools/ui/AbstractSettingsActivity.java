@@ -89,6 +89,14 @@ public abstract class AbstractSettingsActivity extends AppCompatActivity {
 
             return windowInsets;
         });
+
+        nestedScrollView.setOnScrollChangeListener((NestedScrollView.OnScrollChangeListener) (v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
+            if (scrollY > oldScrollY) {
+                fab.shrink();
+            } else if (scrollY < oldScrollY) {
+                fab.extend();
+            }
+        });
     }
 
     private void enableEdgeToEdgeNoContrast() {
