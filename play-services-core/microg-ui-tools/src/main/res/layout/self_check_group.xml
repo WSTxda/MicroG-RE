@@ -25,14 +25,12 @@
         android:id="@android:id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:paddingLeft="?attr/listPreferredItemPaddingLeft"
-        android:paddingTop="16dp"
-        android:paddingEnd="?android:listPreferredItemPaddingEnd"
-        android:paddingRight="?attr/listPreferredItemPaddingRight"
-        android:textAppearance="?attr/textAppearanceBodyMedium"
-        android:textColor="?android:colorAccent"
+        android:paddingStart="?attr/listPreferredItemPaddingStart"
+        android:paddingTop="24dp"
+        android:paddingEnd="?attr/listPreferredItemPaddingEnd"
+        android:paddingBottom="12dp"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:textColor="?attr/colorPrimary"
         tools:text="@string/self_check_cat_permissions" />
 
     <androidx.appcompat.widget.LinearLayoutCompat

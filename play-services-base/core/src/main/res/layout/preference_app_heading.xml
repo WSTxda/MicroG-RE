@@ -46,7 +46,7 @@
             android:ellipsize="marquee"
             android:gravity="center"
             android:singleLine="false"
-            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textAppearance="?attr/textAppearanceTitleLargeEmphasized"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@android:id/icon"

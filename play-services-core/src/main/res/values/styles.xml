@@ -29,11 +29,11 @@
         <item name="backgroundTint">?attr/colorSurface</item>
     </style>
 
-    <style name="Component.SwitchBarPreference" parent="@style/Preference.SwitchBar">
+    <style name="Theme.Component.SwitchBarPreference" parent="@style/Preference.SwitchBar">
         <item name="layout">@layout/preference_material_switch_bar</item>
         <item name="switchBarFrameId">@id/frame</item>
-        <item name="switchBarFrameBackgroundOn">@drawable/material_switch_bar_background_on</item>
-        <item name="switchBarFrameBackgroundOff">@drawable/material_switch_bar_background_off</item>
-        <item name="switchBarFrameBackgroundDisabled">@drawable/material_switch_bar_background_disabled</item>
+        <item name="switchBarFrameBackgroundOn">@drawable/preference_switch_bar_background_on</item>
+        <item name="switchBarFrameBackgroundOff">@drawable/preference_switch_bar_background_off</item>
+        <item name="switchBarFrameBackgroundDisabled">@drawable/preference_switch_bar_background_disabled</item>
     </style>
 </resources>

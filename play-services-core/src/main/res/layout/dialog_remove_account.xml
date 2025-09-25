@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="?attr/colorSurfaceContainerHighest"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/include_account_info">
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="10"
-            android:padding="16dp"
+            android:padding="12dp"
             tools:text="@string/dialog_message_remove_account" />
     </com.google.android.material.card.MaterialCardView>
 

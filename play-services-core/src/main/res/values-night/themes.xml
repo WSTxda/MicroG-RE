@@ -10,7 +10,7 @@
         <item name="alertDialogTheme">@style/Theme.Component.Material.AlertDialog</item>
         <item name="snackbarStyle">@style/Theme.Component.Material.Snackbar</item>
         <item name="switchPreferenceCompatStyle">@style/Theme.Component.Material.SwitchPreferenceCompat</item>
-        <item name="switchBarPreferenceStyle">@style/Component.SwitchBarPreference</item>
+        <item name="switchBarPreferenceStyle">@style/Theme.Component.SwitchBarPreference</item>
         <!--fixes some UI issues on MIUI/HyperOS devices -->
         <item name="android:forceDarkAllowed" tools:targetApi="Q">false</item>
         <!--app bars colors-->

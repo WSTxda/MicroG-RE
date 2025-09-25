@@ -27,7 +27,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -134,11 +133,21 @@ public abstract class AbstractAboutFragment extends Fragment {
         collectLibraries(libraries);
         Collections.sort(libraries);
 
-        LinearLayout libraryContainer = aboutRoot.findViewById(R.id.library_container);
-        for (Library library : libraries) {
+        ViewGroup libraryContainer = aboutRoot.findViewById(R.id.library_container);
+        for (int i = 0; i < libraries.size(); i++) {
+            Library library = libraries.get(i);
+
             View libraryView = inflater.inflate(R.layout.library_item, libraryContainer, false);
-            ((TextView) libraryView.findViewById(android.R.id.text1)).setText(getString(R.string.about_name_version_str, library.name, getLibVersion(library.packageName)));
-            ((TextView) libraryView.findViewById(android.R.id.text2)).setText(library.copyright != null ? library.copyright : getString(R.string.about_default_license));
+
+            TextView title = libraryView.findViewById(android.R.id.text1);
+            TextView subtitle = libraryView.findViewById(android.R.id.text2);
+
+            title.setText(getString(R.string.about_name_version_str, library.name, getLibVersion(library.packageName)));
+            subtitle.setText(library.copyright != null ? library.copyright : getString(R.string.about_default_license));
+
+            com.google.android.material.listitem.ListItemLayout listItemLayout = libraryView.findViewById(R.id.list_item_library);
+            listItemLayout.updateAppearance(i, libraries.size());
+
             libraryContainer.addView(libraryView);
         }
 

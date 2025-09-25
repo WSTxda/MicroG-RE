@@ -6,8 +6,8 @@
     android:layout_marginBottom="24dp"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingTop="24dp"
     android:paddingStart="24dp"
+    android:paddingTop="24dp"
     android:paddingEnd="24dp">
 
     <com.google.android.material.imageview.ShapeableImageView

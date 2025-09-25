@@ -11,7 +11,7 @@
     android:layout_marginStart="?attr/listPreferredItemPaddingStart"
     android:layout_marginEnd="?attr/listPreferredItemPaddingEnd"
     android:layout_marginBottom="12dp"
-    android:background="@drawable/material_switch_bar_background_on"
+    android:background="@drawable/preference_switch_bar_background_on"
     android:minHeight="?attr/listPreferredItemHeight"
     android:orientation="vertical">
 
@@ -32,7 +32,7 @@
             android:layout_weight="1"
             android:ellipsize="end"
             android:textAppearance="?attr/textAppearanceTitleMediumEmphasized"
-            android:textColor="?attr/colorOnPrimaryContainer"
+            android:textColor="@color/preference_switch_bar_text_color"
             tools:text="Enabled" />
 
         <com.google.android.material.materialswitch.MaterialSwitch

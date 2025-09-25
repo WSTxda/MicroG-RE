@@ -15,7 +15,7 @@ buildscript {
     ext.fragmentVersion = '1.8.9'
     ext.lifecycleVersion = '2.9.2'
     ext.loaderVersion = '1.1.0'
-    ext.materialVersion = '1.14.0-alpha03'
+    ext.materialVersion = '1.14.0-alpha04'
     ext.mediarouterVersion = '1.8.1'
     ext.multidexVersion = '2.0.1'
     ext.navigationVersion = '2.9.3'

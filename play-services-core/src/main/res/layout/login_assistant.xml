@@ -11,6 +11,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_marginHorizontal="8dp"
+        android:theme="@style/ThemeOverlay.Material3.Toolbar.CircleNavigationButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -87,7 +89,7 @@
                     android:textColor="?android:textColorPrimary"
                     tools:text="@string/auth_before_connect" />
             </FrameLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.divider.MaterialDivider

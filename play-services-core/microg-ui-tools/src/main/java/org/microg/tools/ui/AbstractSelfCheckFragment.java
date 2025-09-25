@@ -17,9 +17,9 @@
 package org.microg.tools.ui;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -48,7 +48,7 @@ public abstract class AbstractSelfCheckFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View scrollRoot = inflater.inflate(R.layout.self_check, container, false);
-        root = (ViewGroup) scrollRoot.findViewById(R.id.self_check_root);
+        root = scrollRoot.findViewById(R.id.self_check_root);
         reset(inflater);
         return scrollRoot;
     }
@@ -56,14 +56,14 @@ public abstract class AbstractSelfCheckFragment extends Fragment {
     protected abstract void prepareSelfCheckList(List<SelfCheckGroup> checks);
 
     protected void reset(LayoutInflater inflater) {
-        List<SelfCheckGroup> selfCheckGroupList = new ArrayList<SelfCheckGroup>();
+        List<SelfCheckGroup> selfCheckGroupList = new ArrayList<>();
         prepareSelfCheckList(selfCheckGroupList);
 
         root.removeAllViews();
         for (SelfCheckGroup group : selfCheckGroupList) {
             View groupView = inflater.inflate(R.layout.self_check_group, root, false);
             ((TextView) groupView.findViewById(android.R.id.title)).setText(group.getGroupName(getContext()));
-            final ViewGroup viewGroup = (ViewGroup) groupView.findViewById(R.id.group_content);
+            final ViewGroup viewGroup = groupView.findViewById(R.id.group_content);
             final SelfCheckGroup.ResultCollector collector = new GroupResultCollector(viewGroup);
             try {
                 group.doChecks(getContext(), collector);
@@ -88,39 +88,49 @@ public abstract class AbstractSelfCheckFragment extends Fragment {
         }
 
         @Override
-        public void addResult(final String name, final SelfCheckGroup.Result result, final String resolution,
-                              final SelfCheckGroup.CheckResolver resolver) {
+        public void addResult(final String name, final SelfCheckGroup.Result result, final String resolution, final SelfCheckGroup.CheckResolver resolver) {
             if (result == null || getActivity() == null) return;
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    View resultEntry = LayoutInflater.from(getContext()).inflate(R.layout.self_check_entry, viewGroup, false);
-                    ((TextView) resultEntry.findViewById(R.id.self_check_name)).setText(name);
-                    resultEntry.findViewById(R.id.self_check_result).setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            return true;
-                        }
-                    });
-                    if (result == Positive) {
-                        ((CheckBox) resultEntry.findViewById(R.id.self_check_result)).setChecked(true);
-                        resultEntry.findViewById(R.id.self_check_resolution).setVisibility(GONE);
-                    } else {
-                        ((TextView) resultEntry.findViewById(R.id.self_check_resolution)).setText(resolution);
-                        if (result == Unknown) {
-                            resultEntry.findViewById(R.id.self_check_result).setVisibility(INVISIBLE);
-                        }
-                        if (resolver != null) {
-                            resultEntry.setClickable(true);
-                            resultEntry.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    resolver.tryResolve(AbstractSelfCheckFragment.this);
-                                }
-                            });
+            getActivity().runOnUiThread(() -> {
+                View resultEntry = LayoutInflater.from(getContext()).inflate(R.layout.self_check_entry, viewGroup, false);
+
+                TextView nameView = resultEntry.findViewById(R.id.self_check_name);
+                TextView resolutionView = resultEntry.findViewById(R.id.self_check_resolution);
+                CheckBox checkBox = resultEntry.findViewById(R.id.self_check_result);
+                resultEntry.findViewById(R.id.list_item_check);
+
+                nameView.setText(name);
+
+                resultEntry.findViewById(R.id.self_check_result).setOnTouchListener((v, event) -> {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        if (event.getX() >= 0 && event.getX() <= v.getWidth() && event.getY() >= 0 && event.getY() <= v.getHeight()) {
+                            v.performClick();
                         }
                     }
-                    viewGroup.addView(resultEntry);
+                    return true;
+                });
+
+                if (result == Positive) {
+                    checkBox.setChecked(true);
+                    resolutionView.setVisibility(GONE);
+                } else {
+                    resolutionView.setText(resolution);
+                    if (result == Unknown) {
+                        checkBox.setVisibility(INVISIBLE);
+                    }
+                    if (resolver != null) {
+                        resultEntry.setClickable(true);
+                        resultEntry.setOnClickListener(v -> resolver.tryResolve(AbstractSelfCheckFragment.this));
+                    }
+                }
+
+                viewGroup.addView(resultEntry);
+
+                for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                    View child = viewGroup.getChildAt(i);
+                    com.google.android.material.listitem.ListItemLayout layout = child.findViewById(R.id.list_item_check);
+                    if (layout != null) {
+                        layout.updateAppearance(i, viewGroup.getChildCount());
+                    }
                 }
             });
         }

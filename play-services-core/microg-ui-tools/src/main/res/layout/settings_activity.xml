@@ -49,8 +49,9 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_marginHorizontal="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:elevation="0dp"
+                android:theme="@style/ThemeOverlay.Material3.Toolbar.CircleNavigationButton"
                 app:layout_collapseMode="pin" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -94,10 +95,13 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/preference_fab"
-        style="@style/Widget.Material3.ExtendedFloatingActionButton.Tertiary"
+        style="?attr/extendedFloatingActionButtonSmallStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="17dp"
-        android:visibility="gone" />
+        android:textColor="?attr/colorOnTertiaryContainer"
+        android:visibility="gone"
+        app:backgroundTint="?attr/colorTertiaryContainer"
+        app:iconTint="?attr/colorOnTertiaryContainer" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
