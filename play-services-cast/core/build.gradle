@@ -60,6 +60,7 @@ android {
     }
 
     kotlinOptions {
+        //noinspection GrDeprecatedAPIUsage
         jvmTarget = '18'
     }
 }

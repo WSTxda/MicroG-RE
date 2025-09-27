@@ -32,6 +32,7 @@ dependencies {
     implementation "androidx.webkit:webkit:$webkitVersion"
 
     // Material Components
+    //noinspection GradleDependency
     implementation "com.google.android.material:material:$materialVersion"
 
     // Navigation

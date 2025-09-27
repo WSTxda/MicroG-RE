@@ -15,7 +15,7 @@ buildscript {
     ext.fragmentVersion = '1.8.9'
     ext.lifecycleVersion = '2.9.2'
     ext.loaderVersion = '1.1.0'
-    ext.materialVersion = '1.14.0-alpha04'
+    ext.materialVersion = '1.14.0-alpha05'
     ext.mediarouterVersion = '1.8.1'
     ext.multidexVersion = '2.0.1'
     ext.navigationVersion = '2.9.3'
@@ -33,7 +33,7 @@ buildscript {
     ext.wearableVersion = '0.1.1'
     ext.wireVersion = '5.3.10'
 
-    ext.androidBuildGradleVersion = '8.12.0'
+    ext.androidBuildGradleVersion = '8.13.0'
 
 //    ext.androidBuildVersionTools = '34.0.0'
 

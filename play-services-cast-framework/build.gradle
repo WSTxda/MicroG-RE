@@ -62,6 +62,6 @@ dependencies {
     api project(':play-services-basement')
     api project(':play-services-cast')
     api project(':play-services-tasks')
-    //noinspection NewerVersionAvailable,GradleDependency
+    //noinspection NewerVersionAvailable
     api 'com.google.guava:listenablefuture:1.0'
 }

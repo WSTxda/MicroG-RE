@@ -46,6 +46,7 @@ dependencies {
     //noinspection GradleDependency
     implementation "androidx.appcompat:appcompat:$appcompatVersion"
     implementation "androidx.preference:preference:$preferenceVersion"
+    //noinspection GradleDependency
     implementation "com.google.android.material:material:$materialVersion"
     //noinspection NewerVersionAvailable
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
