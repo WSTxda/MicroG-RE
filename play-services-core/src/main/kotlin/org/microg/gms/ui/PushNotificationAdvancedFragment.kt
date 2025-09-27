@@ -2,13 +2,16 @@
  * SPDX-FileCopyrightText: 2020, microG Project Team
  * SPDX-License-Identifier: Apache-2.0
  */
+
 package org.microg.gms.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -48,6 +51,12 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.setBackgroundColor(MaterialColors.getColor(view, android.R.attr.colorBackground))
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                updateContent()
+            }
+        }
     }
 
     @SuppressLint("RestrictedApi")
@@ -60,7 +69,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
 
         confirmNewApps.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
             val appContext = requireContext().applicationContext
-            lifecycleScope.launchWhenResumed {
+            lifecycleScope.launch {
                 if (newValue is Boolean) {
                     setGcmServiceConfiguration(appContext, getGcmServiceInfo(appContext).configuration.copy(confirmNewApps = newValue))
                 }
@@ -70,7 +79,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
         }
         networkMobile.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
             val appContext = requireContext().applicationContext
-            lifecycleScope.launchWhenResumed {
+            lifecycleScope.launch {
                 (newValue as? String)?.toIntOrNull()?.let {
                     setGcmServiceConfiguration(appContext, getGcmServiceInfo(appContext).configuration.copy(mobile = it))
                 }
@@ -80,7 +89,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
         }
         networkWifi.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
             val appContext = requireContext().applicationContext
-            lifecycleScope.launchWhenResumed {
+            lifecycleScope.launch {
                 (newValue as? String)?.toIntOrNull()?.let {
                     setGcmServiceConfiguration(appContext, getGcmServiceInfo(appContext).configuration.copy(wifi = it))
                 }
@@ -90,7 +99,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
         }
         networkRoaming.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
             val appContext = requireContext().applicationContext
-            lifecycleScope.launchWhenResumed {
+            lifecycleScope.launch {
                 (newValue as? String)?.toIntOrNull()?.let {
                     setGcmServiceConfiguration(appContext, getGcmServiceInfo(appContext).configuration.copy(roaming = it))
                 }
@@ -100,7 +109,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
         }
         networkOther.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
             val appContext = requireContext().applicationContext
-            lifecycleScope.launchWhenResumed {
+            lifecycleScope.launch {
                 (newValue as? String)?.toIntOrNull()?.let {
                     setGcmServiceConfiguration(appContext, getGcmServiceInfo(appContext).configuration.copy(other = it))
                 }
@@ -127,25 +136,18 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        updateContent()
-    }
-
-    private fun updateContent() {
+    private suspend fun updateContent() {
         val appContext = requireContext().applicationContext
-        lifecycleScope.launchWhenResumed {
-            val serviceInfo = getGcmServiceInfo(appContext)
-            confirmNewApps.isChecked = serviceInfo.configuration.confirmNewApps
-            networkMobile.value = serviceInfo.configuration.mobile.toString()
-            networkMobile.summary = getSummaryString(serviceInfo.configuration.mobile, serviceInfo.learntMobileInterval)
-            networkWifi.value = serviceInfo.configuration.wifi.toString()
-            networkWifi.summary = getSummaryString(serviceInfo.configuration.wifi, serviceInfo.learntWifiInterval)
-            networkRoaming.value = serviceInfo.configuration.roaming.toString()
-            networkRoaming.summary = getSummaryString(serviceInfo.configuration.roaming, serviceInfo.learntMobileInterval)
-            networkOther.value = serviceInfo.configuration.other.toString()
-            networkOther.summary = getSummaryString(serviceInfo.configuration.other, serviceInfo.learntOtherInterval)
-        }
+        val serviceInfo = getGcmServiceInfo(appContext)
+        confirmNewApps.isChecked = serviceInfo.configuration.confirmNewApps
+        networkMobile.value = serviceInfo.configuration.mobile.toString()
+        networkMobile.summary = getSummaryString(serviceInfo.configuration.mobile, serviceInfo.learntMobileInterval)
+        networkWifi.value = serviceInfo.configuration.wifi.toString()
+        networkWifi.summary = getSummaryString(serviceInfo.configuration.wifi, serviceInfo.learntWifiInterval)
+        networkRoaming.value = serviceInfo.configuration.roaming.toString()
+        networkRoaming.summary = getSummaryString(serviceInfo.configuration.roaming, serviceInfo.learntMobileInterval)
+        networkOther.value = serviceInfo.configuration.other.toString()
+        networkOther.summary = getSummaryString(serviceInfo.configuration.other, serviceInfo.learntOtherInterval)
     }
 
     private fun getSummaryString(value: Int, learnt: Int): String = when (value) {
