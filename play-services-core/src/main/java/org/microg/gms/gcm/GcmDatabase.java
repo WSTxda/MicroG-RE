@@ -13,24 +13,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import static android.os.Build.VERSION.SDK_INT;
-
+/**
+ * @noinspection unused
+ */
 public class GcmDatabase extends SQLiteOpenHelper {
     private static final String TAG = GcmDatabase.class.getSimpleName();
     public static final String DB_NAME = "gcmstatus";
-    private static int DB_VERSION = 1;
-    private static final String CREATE_TABLE_APPS = "CREATE TABLE apps (" +
-            "package_name TEXT," +
-            "last_error TEXT DEFAULT ''," +
-            "last_message_timestamp INTEGER," +
-            "total_message_count INTEGER," +
-            "total_message_bytes INTEGER," +
-            "allow_register INTEGER DEFAULT 1," +
-            "wake_for_delivery INTEGER DEFAULT 1," +
-            "PRIMARY KEY (package_name));";
+    private static final int DB_VERSION = 1;
+    private static final String CREATE_TABLE_APPS = "CREATE TABLE apps (" + "package_name TEXT," + "last_error TEXT DEFAULT ''," + "last_message_timestamp INTEGER," + "total_message_count INTEGER," + "total_message_bytes INTEGER," + "allow_register INTEGER DEFAULT 1," + "wake_for_delivery INTEGER DEFAULT 1," + "PRIMARY KEY (package_name));";
     private static final String TABLE_APPS = "apps";
     private static final String FIELD_PACKAGE_NAME = "package_name";
     private static final String FIELD_LAST_ERROR = "last_error";
@@ -40,25 +32,18 @@ public class GcmDatabase extends SQLiteOpenHelper {
     private static final String FIELD_ALLOW_REGISTER = "allow_register";
     private static final String FIELD_WAKE_FOR_DELIVERY = "wake_for_delivery";
 
-    private static final String CREATE_TABLE_REGISTRATIONS = "CREATE TABLE registrations (" +
-            "package_name TEXT," +
-            "signature TEXT," +
-            "timestamp INTEGER," +
-            "register_id TEXT," +
-            "PRIMARY KEY (package_name, signature));";
+    private static final String CREATE_TABLE_REGISTRATIONS = "CREATE TABLE registrations (" + "package_name TEXT," + "signature TEXT," + "timestamp INTEGER," + "register_id TEXT," + "PRIMARY KEY (package_name, signature));";
     private static final String TABLE_REGISTRATIONS = "registrations";
     private static final String FIELD_SIGNATURE = "signature";
     private static final String FIELD_TIMESTAMP = "timestamp";
     private static final String FIELD_REGISTER_ID = "register_id";
 
-    private Context context;
+    private final Context context;
 
     public GcmDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         this.context = context;
-        if (SDK_INT >= 16) {
-            this.setWriteAheadLoggingEnabled(true);
-        }
+        this.setWriteAheadLoggingEnabled(true);
     }
 
     public static class App {
@@ -109,44 +94,35 @@ public class GcmDatabase extends SQLiteOpenHelper {
     public synchronized List<App> getAppList() {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(TABLE_APPS, null, null, null, null, null, null);
-        if (cursor != null) {
-            List<App> result = new ArrayList<>();
-            while (cursor.moveToNext()) {
-                result.add(new App(cursor));
-            }
-            cursor.close();
-            return result;
+        List<App> result = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            result.add(new App(cursor));
         }
-        return Collections.emptyList();
+        cursor.close();
+        return result;
     }
 
     public synchronized List<Registration> getRegistrationList() {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(TABLE_REGISTRATIONS, null, null, null, null, null, null);
-        if (cursor != null) {
-            List<Registration> result = new ArrayList<>();
-            while (cursor.moveToNext()) {
-                result.add(new Registration(cursor));
-            }
-            cursor.close();
-            return result;
+        List<Registration> result = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            result.add(new Registration(cursor));
         }
-        return Collections.emptyList();
+        cursor.close();
+        return result;
     }
 
 
     public synchronized List<Registration> getRegistrationsByApp(String packageName) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(TABLE_REGISTRATIONS, null, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName}, null, null, null);
-        if (cursor != null) {
-            List<Registration> result = new ArrayList<>();
-            while (cursor.moveToNext()) {
-                result.add(new Registration(cursor));
-            }
-            cursor.close();
-            return result;
+        List<Registration> result = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            result.add(new Registration(cursor));
         }
-        return Collections.emptyList();
+        cursor.close();
+        return result;
     }
 
     public synchronized void setAppAllowRegister(String packageName, boolean allowRegister) {
@@ -168,6 +144,12 @@ public class GcmDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_REGISTRATIONS, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
         db.delete(TABLE_APPS, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
+    }
+
+    public synchronized void resetDatabase() {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(TABLE_APPS, null, null);
+        db.delete(TABLE_REGISTRATIONS, null, null);
     }
 
     public synchronized void noteAppRegistrationError(String packageName, String error) {
@@ -222,22 +204,21 @@ public class GcmDatabase extends SQLiteOpenHelper {
         db.beginTransaction();
 
         App app = getApp(db, packageName);
+        ContentValues cv = new ContentValues();
         if (app == null) {
-            ContentValues cv = new ContentValues();
             cv.put(FIELD_PACKAGE_NAME, packageName);
             db.insert(TABLE_APPS, null, cv);
         } else {
-            ContentValues cv = new ContentValues();
             cv.put(FIELD_LAST_ERROR, "");
             db.update(TABLE_APPS, cv, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
         }
 
-        ContentValues cv = new ContentValues();
-        cv.put(FIELD_PACKAGE_NAME, packageName);
-        cv.put(FIELD_SIGNATURE, signature);
-        cv.put(FIELD_REGISTER_ID, registrationId);
-        cv.put(FIELD_TIMESTAMP, System.currentTimeMillis());
-        db.insertWithOnConflict(TABLE_REGISTRATIONS, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+        ContentValues regCv = new ContentValues();
+        regCv.put(FIELD_PACKAGE_NAME, packageName);
+        regCv.put(FIELD_SIGNATURE, signature);
+        regCv.put(FIELD_REGISTER_ID, registrationId);
+        regCv.put(FIELD_TIMESTAMP, System.currentTimeMillis());
+        db.insertWithOnConflict(TABLE_REGISTRATIONS, null, regCv, SQLiteDatabase.CONFLICT_REPLACE);
 
         db.setTransactionSuccessful();
         db.endTransaction();
@@ -253,14 +234,9 @@ public class GcmDatabase extends SQLiteOpenHelper {
     }
 
     private App getApp(SQLiteDatabase db, String packageName) {
-        Cursor cursor = db.query(TABLE_APPS, null, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName}, null, null, null, "1");
-        if (cursor != null) {
-            try {
-                if (cursor.moveToNext()) {
-                    return new App(cursor);
-                }
-            } finally {
-                cursor.close();
+        try (Cursor cursor = db.query(TABLE_APPS, null, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName}, null, null, null, "1")) {
+            if (cursor.moveToNext()) {
+                return new App(cursor);
             }
         }
         return null;
@@ -271,14 +247,9 @@ public class GcmDatabase extends SQLiteOpenHelper {
     }
 
     private Registration getRegistration(SQLiteDatabase db, String packageName, String signature) {
-        Cursor cursor = db.query(TABLE_REGISTRATIONS, null, FIELD_PACKAGE_NAME + " LIKE ? AND " + FIELD_SIGNATURE + " LIKE ?", new String[]{packageName, signature}, null, null, null, "1");
-        if (cursor != null) {
-            try {
-                if (cursor.moveToNext()) {
-                    return new Registration(cursor);
-                }
-            } finally {
-                cursor.close();
+        try (Cursor cursor = db.query(TABLE_REGISTRATIONS, null, FIELD_PACKAGE_NAME + " LIKE ? AND " + FIELD_SIGNATURE + " LIKE ?", new String[]{packageName, signature}, null, null, null, "1")) {
+            if (cursor.moveToNext()) {
+                return new Registration(cursor);
             }
         }
         return null;
@@ -313,5 +284,4 @@ public class GcmDatabase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         throw new IllegalStateException("Upgrades not supported");
     }
-
 }

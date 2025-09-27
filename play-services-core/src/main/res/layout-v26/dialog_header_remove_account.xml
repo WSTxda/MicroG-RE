@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autoSizeMaxTextSize="24sp"
-        android:autoSizeMinTextSize="20sp"
+        android:autoSizeMinTextSize="18sp"
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
         android:ellipsize="end"

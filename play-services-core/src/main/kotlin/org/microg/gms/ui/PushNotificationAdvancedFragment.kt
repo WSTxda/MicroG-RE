@@ -7,6 +7,7 @@ package org.microg.gms.ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.ListPreference
 import androidx.preference.Preference
@@ -15,6 +16,9 @@ import androidx.preference.TwoStatePreference
 import com.google.android.gms.R
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.platform.MaterialSharedAxis
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.microg.gms.gcm.*
 
 class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
@@ -23,6 +27,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
     private lateinit var networkWifi: ListPreference
     private lateinit var networkRoaming: ListPreference
     private lateinit var networkOther: ListPreference
+    private lateinit var database: GcmDatabase
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.preferences_push_notification_settings)
@@ -30,8 +35,14 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        database = GcmDatabase(context)
         enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
         reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        database.close()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -97,6 +108,23 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
             }
             true
         }
+
+        findPreference<Preference>("pref_push_notification_reset")?.setOnPreferenceClickListener {
+            AlertDialog.Builder(requireContext())
+                .setIcon(R.drawable.ic_unregister)
+                .setTitle(R.string.gcm_remove_registers_dialog_title)
+                .setMessage(R.string.gcm_remove_registers_dialog_message)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    lifecycleScope.launch {
+                        withContext(Dispatchers.IO) {
+                            database.resetDatabase()
+                        }
+                    }
+                }
+                .setNegativeButton(android.R.string.cancel, null)
+                .show()
+            true
+        }
     }
 
     override fun onResume() {
@@ -133,6 +161,7 @@ class PushNotificationAdvancedFragment : PreferenceFragmentCompat() {
     }
 
     companion object {
+        @Suppress("unused")
         private val HEARTBEAT_PREFS = arrayOf(GcmPrefs.PREF_NETWORK_MOBILE, GcmPrefs.PREF_NETWORK_ROAMING, GcmPrefs.PREF_NETWORK_WIFI, GcmPrefs.PREF_NETWORK_OTHER)
     }
 }

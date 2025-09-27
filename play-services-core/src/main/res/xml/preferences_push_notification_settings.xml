@@ -80,4 +80,18 @@
             android:title="@string/network_type_other"
             app:dialogIcon="@drawable/ic_network_others" />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_material_category"
+        app:allowDividerAbove="false"
+        app:title="@string/prefcat_gcm_registers">
+
+        <Preference
+            android:icon="@drawable/ic_unregister"
+            android:key="pref_push_notification_reset"
+            android:layout="@layout/preference_material_single"
+            android:summary="@string/pref_gcm_remove_registers_summary"
+            android:title="@string/pref_gcm_remove_registers"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
 </PreferenceScreen>

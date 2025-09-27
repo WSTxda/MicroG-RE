@@ -31,7 +31,6 @@
             android:layout="@layout/preference_material_bottom"
             android:order="5"
             android:title="@string/list_item_see_all" />
-
     </PreferenceCategory>
 
     <PreferenceCategory

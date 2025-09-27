@@ -92,8 +92,8 @@ class PushNotificationAppFragment : PreferenceFragmentCompat() {
                 .setTitle(getString(R.string.gcm_unregister_confirm_title, applicationInfo?.loadLabel(pm)
                         ?: packageName))
                 .setMessage(unregisterConfirmDesc)
-                .setPositiveButton(android.R.string.yes) { _, _ -> unregister() }
-                .setNegativeButton(android.R.string.no) { _, _ -> }.show()
+                .setPositiveButton(android.R.string.ok) { _, _ -> unregister() }
+                .setNegativeButton(android.R.string.cancel) { _, _ -> }.show()
     }
 
     private fun unregister() {
