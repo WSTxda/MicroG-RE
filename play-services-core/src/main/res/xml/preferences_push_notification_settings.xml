@@ -17,14 +17,27 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SwitchPreferenceCompat
-        android:defaultValue="false"
-        android:key="gcm_confirm_new_apps"
-        android:layout="@layout/preference_material_single"
-        android:persistent="false"
-        android:summary="@string/pref_gcm_confirm_new_apps_summary"
-        android:title="@string/pref_gcm_confirm_new_apps_title"
-        app:iconSpaceReserved="false" />
+    <PreferenceCategory
+        android:layout="@layout/preference_material_category_small"
+        app:allowDividerAbove="false"
+        app:title="@string/prefcat_gcm_registers">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="gcm_confirm_new_apps"
+            android:layout="@layout/preference_material_top"
+            android:persistent="false"
+            android:summary="@string/pref_gcm_confirm_new_apps_summary"
+            android:title="@string/pref_gcm_confirm_new_apps_title"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="pref_push_notification_reset"
+            android:layout="@layout/preference_material_bottom"
+            android:summary="@string/pref_gcm_remove_registers_summary"
+            android:title="@string/pref_gcm_remove_registers"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="prefcat_networks"
@@ -79,19 +92,5 @@
             android:summary="ON / Automatic: 30 min"
             android:title="@string/network_type_other"
             app:dialogIcon="@drawable/ic_network_others" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:layout="@layout/preference_material_category"
-        app:allowDividerAbove="false"
-        app:title="@string/prefcat_gcm_registers">
-
-        <Preference
-            android:icon="@drawable/ic_unregister"
-            android:key="pref_push_notification_reset"
-            android:layout="@layout/preference_material_single"
-            android:summary="@string/pref_gcm_remove_registers_summary"
-            android:title="@string/pref_gcm_remove_registers"
-            app:iconSpaceReserved="false" />
     </PreferenceCategory>
 </PreferenceScreen>
