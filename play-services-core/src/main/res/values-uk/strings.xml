@@ -173,6 +173,13 @@
     <string name="pref_network_google_use_tor">Підключення до Google через мережу Tor</string>
     <string name="pref_network_google_use_tor_summary">Потрібно встановити Orbot\\nЩе не підтримується</string>
 
+    <string name="prefcat_gcm_registers">Реєстри</string>
+    <string name="pref_gcm_remove_registers">Видалити всі зареєстровані програми</string>
+    <string name="pref_gcm_remove_registers_summary">Використовуйте цю опцію лише у випадку проблем з реєстрацією програми або отриманням сповіщень</string>
+
+    <string name="gcm_remove_registers_dialog_title">Видалити всі реєстрації?</string>
+    <string name="gcm_remove_registers_dialog_message">Це одночасно видалить усі програми, зареєстровані для push-сповіщень\n\nВам потрібно буде відкрити програми для повторної реєстрації в хмарних повідомленнях\n\nДеякі програми можуть не зареєструватися знову після цієї дії</string>
+
     <!-- Account settings-->
 
     <string name="pref_accounts_summary">Додати й керувати обліковими записами Google</string>

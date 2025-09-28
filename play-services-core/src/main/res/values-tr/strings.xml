@@ -185,12 +185,16 @@ Bu işlem birkaç dakika sürebilir."</string>
     <string name="push_notifications_summary_values_minutes">%s dakika</string>
 
     <string name="pref_network_google_enabled_summary">Devre dışı bırakılırsa, MicroG tarafından Google sunucularına yapılan tüm bağlantılar engellenir. Bu ayar, hizmete özel ayarların üzerine yazacaktır</string>
-
     <string name="pref_network_google_enabled">Google sunucularına bağlanmaya izin ver</string>
-
     <string name="pref_network_google_use_tor">Google’a Tor ağı üzerinden bağlan</string>
-
     <string name="pref_network_google_use_tor_summary">Orbot\'un yüklü olması gerekir\nHenüz desteklenmiyor</string>
+
+    <string name="prefcat_gcm_registers">Kayıtlar</string>
+    <string name="pref_gcm_remove_registers">Tüm kayıtlı uygulamaları kaldır</string>
+    <string name="pref_gcm_remove_registers_summary">Bu seçeneği yalnızca bir uygulamayı kaydetmede veya bildirim almada sorun yaşıyorsanız kullanın</string>
+
+    <string name="gcm_remove_registers_dialog_title">Tüm kayıtlar silinsin mi?</string>
+    <string name="gcm_remove_registers_dialog_message">Bu işlem, anlık bildirimler için kayıtlı tüm uygulamaları aynı anda kaldıracaktır\n\nUygulamaları açarak bulut mesajlaşmaya yeniden kaydolmanız gerekecektir\n\nBazı uygulamalar bu işlemden sonra tekrar kaydolamayabilir</string>
 
     <!-- Account settings-->
 

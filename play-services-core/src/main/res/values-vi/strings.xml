@@ -170,6 +170,13 @@ Việc này có thể tốn thời gian"</string>
     <string name="pref_network_google_use_tor">Kết nối máy chủ Google qua mạng lưới Tor</string>
     <string name="pref_network_google_use_tor_summary">Yêu cầu ứng dụng Orbot \\nChưa được cài đặt</string>
 
+    <string name="prefcat_gcm_registers">Trạng thái đăng kí</string>
+    <string name="pref_gcm_remove_registers">Gỡ mọi ứng dụng đã đăng kí</string>
+    <string name="pref_gcm_remove_registers_summary">Chỉ sử dụng khi bạn gặp vấn đề khi đăng kí hoặc nhận thông báo từ ứng dụng</string>
+
+    <string name="gcm_remove_registers_dialog_title">Xoá mọi trạng thái đăng kí?</string>
+    <string name="gcm_remove_registers_dialog_message">Điều này sẽ xoá tất cả những ứng dụng đã được đăng kí nhận thông báo từ FCM\n\nBạn cần phải mở những ứng dụng để đăng kí lại vào FCM\n\nMột vài ứng dụng có thể không thể đăng kí lại sau khi thực hiện</string>
+
     <!-- Account settings-->
 
     <string name="pref_accounts_summary">Thêm và quản lý tài khoản Google của bạn</string>

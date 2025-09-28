@@ -154,6 +154,13 @@
     <string name="pref_network_google_use_tor">Połącz z Google przez sieć Tor</string>
     <string name="pref_network_google_use_tor_summary">Wymaga zainstalowania Orbot\nJeszcze niewspierane</string>
 
+    <string name="prefcat_gcm_registers">Rejestry</string>
+    <string name="pref_gcm_remove_registers">Usuń wszystkie zarejestrowane aplikacje</string>
+    <string name="pref_gcm_remove_registers_summary">Używaj tej opcji tylko w przypadku problemów z rejestracją aplikacji lub otrzymywaniem powiadomień</string>
+
+    <string name="gcm_remove_registers_dialog_title">Usunąć wszystkie rejestry?</string>
+    <string name="gcm_remove_registers_dialog_message">Spowoduje to jednoczesne usunięcie wszystkich aplikacji zarejestrowanych do powiadomień push\n\nBędziesz musiał otworzyć aplikacje, aby ponownie zarejestrować się w wiadomościach w chmurze\n\nNiektóre aplikacje mogą nie być w stanie zarejestrować się ponownie po tej akcji</string>
+
     <!-- Ustawienia konta -->
 
     <string name="pref_accounts_summary">Dodaj i zarządzaj kontami Google</string>

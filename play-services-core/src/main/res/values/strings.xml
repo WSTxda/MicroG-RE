@@ -174,12 +174,12 @@ This can take a couple of minutes"</string>
     <string name="pref_network_google_use_tor">Connect to Google via Tor network</string>
     <string name="pref_network_google_use_tor_summary">Requires Orbot to be installed\\nNot yet supported</string>
 
-'    <string name="prefcat_gcm_registers">Registers</string>
+    <string name="prefcat_gcm_registers">Registers</string>
     <string name="pref_gcm_remove_registers">Remove all registered apps</string>
-    <string name="pref_gcm_remove_registers_summary">Use this option if you are having problems receiving notifications or with apps registrations</string>
+    <string name="pref_gcm_remove_registers_summary">Only use this option if you are having problems registering an app or receiving notifications</string>
 
-    <string name="gcm_remove_registers_dialog_title">Remove all registrations?</string>
-    <string name="gcm_remove_registers_dialog_message">This will remove all applications registered for push notifications at once. You will need to open the applications to re-register on cloud messaging.</string>'
+    <string name="gcm_remove_registers_dialog_title">Remove all registers?</string>
+    <string name="gcm_remove_registers_dialog_message">This will remove all applications registered for push notifications at once\n\nYou will need to open the applications to re-register on cloud messaging\n\nSome apps maybe cannot register again after this action</string>
 
     <!-- Account settings-->
 

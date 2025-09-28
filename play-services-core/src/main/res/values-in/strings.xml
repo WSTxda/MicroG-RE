@@ -166,6 +166,13 @@ Ini mungkin memerlukan beberapa menit"</string>
     <string name="pref_network_google_use_tor">Hubungkan ke Google melalui jaringan Tor</string>
     <string name="pref_network_google_use_tor_summary">Membutuhkan Orbot untuk diinstal\nBelum didukung</string>
 
+    <string name="prefcat_gcm_registers">Pendaftaran</string>
+    <string name="pref_gcm_remove_registers">Hapus semua aplikasi yang terdaftar</string>
+    <string name="pref_gcm_remove_registers_summary">Gunakan opsi ini hanya jika Anda mengalami masalah dalam mendaftarkan aplikasi atau menerima notifikasi</string>
+
+    <string name="gcm_remove_registers_dialog_title">Hapus semua pendaftaran?</string>
+    <string name="gcm_remove_registers_dialog_message">Ini akan menghapus semua aplikasi yang terdaftar untuk notifikasi push sekaligus\n\nAnda perlu membuka aplikasi untuk mendaftar ulang di pesan awan\n\nBeberapa aplikasi mungkin tidak dapat mendaftar lagi setelah tindakan ini</string>
+
     <!-- Account settings-->
 
     <string name="pref_accounts_summary">Tambahkan dan kelola akun Google</string>

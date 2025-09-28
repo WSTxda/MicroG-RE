@@ -168,6 +168,13 @@
     <string name="pref_network_google_use_tor">الاتصال بـ Google عبر شبكة Tor</string>
     <string name="pref_network_google_use_tor_summary">يتطلب تثبيت Orbot\nغير مدعوم حتى الآن</string>
 
+    <string name="prefcat_gcm_registers">التسجيلات</string>
+    <string name="pref_gcm_remove_registers">إزالة جميع التطبيقات المسجلة</string>
+    <string name="pref_gcm_remove_registers_summary">استخدم هذا الخيار فقط إذا كنت تواجه مشكلات في تسجيل تطبيق أو تلقي الإشعارات</string>
+
+    <string name="gcm_remove_registers_dialog_title">إزالة جميع التسجيلات؟</string>
+    <string name="gcm_remove_registers_dialog_message">سيؤدي ذلك إلى إزالة جميع التطبيقات المسجلة لتلقي إشعارات الدفع مرة واحدة. ستحتاج إلى فتح التطبيقات لإعادة التسجيل في خدمة الرسائل السحابية.\nقد لا تتمكن بعض التطبيقات من التسجيل مرة أخرى بعد هذا الإجراء</string>
+
     <!-- Account settings-->
 
     <string name="pref_accounts_summary">إضافة وإدارة حسابات Google</string>

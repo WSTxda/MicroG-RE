@@ -164,6 +164,13 @@ Isso pode levar alguns minutos. Por favor, seja paciente."</string>
     <string name="pref_network_google_use_tor">Conectar ao Google via rede Tor</string>
     <string name="pref_network_google_use_tor_summary">Exige que o Orbot esteja instalado\\nAinda não há suporte</string>
 
+    <string name="prefcat_gcm_registers">Registros</string>
+    <string name="pref_gcm_remove_registers">Remover todos os aplicativos registrados</string>
+    <string name="pref_gcm_remove_registers_summary">Use esta opção apenas se estiver com problemas para registrar um aplicativo ou receber notificações</string>
+
+    <string name="gcm_remove_registers_dialog_title">Remover todos os registros?</string>
+    <string name="gcm_remove_registers_dialog_message">Isso removerá todos os aplicativos registrados para notificações push de uma só vez\n\nVocê precisará abrir os aplicativos para registrar novamente no serviço de mensagens na nuvem\n\nAlguns aplicativos talvez não consigam se registrar novamente após esta ação</string>
+
     <!-- Account settings-->
 
     <string name="pref_accounts_summary">Adicionar e gerenciar contas Google</string>
